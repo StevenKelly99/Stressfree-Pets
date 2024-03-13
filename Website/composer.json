@@ -12,5 +12,8 @@
     ],
     "config": {
         "platform": {}
-    }
+    },
+  "require": {
+    "ext-json": "*"
+  }
 }

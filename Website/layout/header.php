@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="../favicon.ico">
 
     <title>Stressfree Pets</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -33,7 +34,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="../public/index.php">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -43,6 +44,7 @@
 
                         </ul>
                     </li>
+                    <li><a href="../public/aboutUs.php">About us</a> </li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                 </ul>

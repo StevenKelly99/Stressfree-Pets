@@ -3923,8 +3923,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #953b39;
-  background-color: #ec971f;
+  color: #eb9316;
+  background-color:#953b39;
 }
 
 .nav-stacked > li {
@@ -4004,8 +4004,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav a:hover .caret {
-  border-top-color: #ec971f;
-  border-bottom-color: #953b39;
+  border-top-color: #953b39;
+  border-bottom-color: #ec971f;
 }
 
 .nav-tabs .dropdown-menu {
@@ -4930,7 +4930,7 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: bisque;
 }
 
 .jumbotron h1 {
