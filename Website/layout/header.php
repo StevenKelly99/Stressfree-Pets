@@ -38,7 +38,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Dog walking</a></li>
+                            <li><a href="../public/PetWalking.php">Dog walking</a></li>
                             <li><a href="#">Pet sitting</a></li>
                             <li><a href="#">Dog Daycare</a></li>
 
