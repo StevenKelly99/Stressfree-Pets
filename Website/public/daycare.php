@@ -1,8 +1,8 @@
-<?php require "../layout/header.php"?>
+<?php require "../layout/header.php";?>
 
 <body>
-<div class="petWalking">
-    <img src="../images/petWalking.jpg" height="450" width="650" alt="petWalkingImg">
+<div class="daycare">
+    <img src="../images/daycare.jpg" height="450" width="650" alt="petWalkingImg">
     <p>Pet Walking service is providing help for your pets such as taking your dog to the vet,
         helping you dog lose weight, keep tracking of your dog's food,
         keep an eye on your pet's health, helping your dog to learn new thing,
@@ -13,7 +13,3 @@
 </div>
 
 </body>
-
-
-
-

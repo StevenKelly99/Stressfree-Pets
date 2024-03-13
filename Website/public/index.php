@@ -46,7 +46,7 @@ $pupCount = count($pets);
         <img src="../images/petSitting.jpg" height="250" width="350" alt="picture">
         <h3>Pet Sitting Service</h3>
         <p>Pet sitting services provide a pet sitter that visits our home and spends the time you decide with your pet.
-            If you need to know more about the service, you can <a href="petSitting.php"><strong>click here</strong></a></p>
+            If you need to know more about the service, you can <a href="petsitting.php"><strong>click here</strong></a></p>
     </div>
 </div>
 </body>
