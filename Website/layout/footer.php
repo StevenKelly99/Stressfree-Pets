@@ -5,6 +5,7 @@
     <span class="span-images"><a href ="https://www.facebook.com/"><img src="../images/facebook.png"></a></span>
     <span class="span-images"><a href="https://www.instagram.com/"><img src="../images/insta.jpg"></a></span>
     <span class="span-images"><a href="https://twitter.com/?lang=en"><img src="../images/x.png"></a></span>
+
         </footer>
     </div>
     <!-- /container -->

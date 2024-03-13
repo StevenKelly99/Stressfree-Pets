@@ -1,10 +1,18 @@
 <?php
-require 'lib/functions.php';
+require_once '../lib/functions.php';
 ?>
-<?php require 'layout/header.php'; ?>
+<?php require_once '../layout/header.php'; ?>
 
-<h1>
-    Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets.
-</h1>
+<div class="text-center">
+    <h2>CONTACT</h2></div>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 
-<?php require 'layout/footer.php'; ?>
+<div class="contact-info">
+    <h4>Contact Information</h4>
+    <p><img width="24" height="24" src="https://img.icons8.com/material-outlined/24/phone.png" alt="phone"/>+353 018 479 685</p>
+    <p><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="new-post"/></i>stressfreepets@gmail.com</p>
+    <p><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/order-delivered.png" alt="order-delivered"/>Address: Blanchardstwon, Dublin, Ireland</p>
+</div>
+
+
+<?php require_once '../layout/footer.php'; ?>

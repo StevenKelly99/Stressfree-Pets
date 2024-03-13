@@ -45,7 +45,7 @@
                         </ul>
                     </li>
                     <li><a href="../public/aboutUs.php">About us</a> </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="../public/contact.php">Contact</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
@@ -56,7 +56,7 @@
                         <input type="password" placeholder="Password" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-success">Sign in</button>
-                    <a href = "#">Signup</a>
+                    <a href = "../public/customerProfile.php">Signup</a>
 
                 </form>
 
