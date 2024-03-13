@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <title>AirPupNMeow.com: All the love, none of the crap!</title>
+    <title>Stressfree Pets</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -29,25 +29,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">AirPupNMeow</a>
+                <a class="navbar-brand" href="#">Stressfree Pets</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="#">Dog walking</a></li>
+                            <li><a href="#">Pet sitting</a></li>
+                            <li><a href="#">Dog Daycare</a></li>
+
                         </ul>
                     </li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
@@ -57,8 +54,15 @@
                         <input type="password" placeholder="Password" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-success">Sign in</button>
+                    <a href = "#">Signup</a>
+
                 </form>
+
+
             </div>
+
+
             <!--/.navbar-collapse -->
         </div>
+
     </div>
