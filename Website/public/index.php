@@ -1,15 +1,16 @@
+
+
+<?php  require_once '../layout/header.php'; ?>
 <?php
-    require 'lib/functions.php';
+require '../lib/functions.php';
 
-    $pets = get_pets();
+$pets = get_pets();
 
-    $pets = array_reverse($pets);
+$pets = array_reverse($pets);
 
-    $cleverWelcomeMessage = 'Welcome to Stressfree Pets';
-    $pupCount = count($pets);
+$cleverWelcomeMessage = 'Welcome to Stressfree Pets';
+$pupCount = count($pets);
 ?>
-
-<?php require 'layout/header.php'; ?>
 
     <div class="jumbotron">
         <div class="container">
@@ -81,4 +82,4 @@
 
         <hr>
 
-<?php require 'layout/footer.php'; ?>
+<?php require_once'../layout/footer.php'; ?>
