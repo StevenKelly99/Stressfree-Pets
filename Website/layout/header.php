@@ -39,13 +39,21 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="../public/PetWalking.php">Dog walking</a></li>
-                            <li><a href="#">Pet sitting</a></li>
+                            <li><a href="../public/petsitting.php">Pet sitting</a></li>
                             <li><a href="#">Dog Daycare</a></li>
 
                         </ul>
                     </li>
-                    <li><a href="../public/aboutUs.php">About us</a> </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="../public/aboutUs.php" class="dropdown-toggle" data-toggle="dropdown">About us<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../public/aboutUs.php.php">About us</a></li>
+                            <li><a href="../public/faq.php">FAQ</a></li>
+                            <li><a href="../public/contact.php">Contact</a></li>
+
+
+                        </ul>
+                    </li>
                     <li><a href="#reviews">Reviews</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">

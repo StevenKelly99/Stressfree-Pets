@@ -82,6 +82,5 @@ $pupCount = count($pets);
             <?php } ?>
         </div>
 
-        <hr>
 
 <?php require_once'../layout/footer.php'; ?>
