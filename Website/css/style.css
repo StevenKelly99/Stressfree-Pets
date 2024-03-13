@@ -1,0 +1,15 @@
+.grids{
+    max-width: 1200px;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 20px;
+}
+body{
+    background-color: bisque;
+
+}
+
+
