@@ -2,14 +2,14 @@
 
 <body>
 <div class="daycare">
-    <img src="../images/daycare.jpg" height="450" width="650" alt="petWalkingImg">
-    <p>Pet Walking service is providing help for your pets such as taking your dog to the vet,
-        helping you dog lose weight, keep tracking of your dog's food,
-        keep an eye on your pet's health, helping your dog to learn new thing,
-        clean you dog's stuff, give your dog a bath</p>
+    <div class="centre">
+        <img src="../images/daycare.jpg" height="300" width="550" alt="petWalkingImg"></div>
+    <p>Daycare is going to make your pet more socialised, play, and do exercise.
+        To prevent loneliness and anxiety, watch your dog and take care of it.
+        by specialised personnel</p>
 
     <p>if you think this service is perfect for you can
-        <button type="button">Book here</button></p>
+        <a href="booking.php"><button type="button">Book here</button></a></p>
 </div>
 
 </body>

@@ -27,7 +27,8 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
-
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">Stressfree Pets</a>
             </div>
@@ -38,21 +39,13 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="../public/PetWalking.php">Dog walking</a></li>
-                            <li><a href="../public/petsitting.php">Pet sitting</a></li>
+                            <li><a href="#">Pet sitting</a></li>
                             <li><a href="#">Dog Daycare</a></li>
 
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="../public/aboutUs.php" class="dropdown-toggle" data-toggle="dropdown">About us<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../public/aboutUs.php.php">About us</a></li>
-                            <li><a href="../public/faq.php">FAQ</a></li>
-                            <li><a href="../public/contact.php">Contact</a></li>
-
-
-                        </ul>
-                    </li>
+                    <li><a href="../public/aboutUs.php">About us</a> </li>
+                    <li><a href="../public/contact.php">Contact</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
@@ -63,7 +56,7 @@
                         <input type="password" placeholder="Password" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-success">Sign in</button>
-                    <a href = "#">Signup</a>
+                    <a href = "../public/customerProfile.php">Signup</a>
 
                 </form>
 
