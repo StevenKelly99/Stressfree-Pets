@@ -11,5 +11,24 @@ body{
     background-color: bisque;
 
 }
+.headingFaq{
+    text-align: center;
+}
+.faqdiv{
+    background-color: #dbc59e;
+
+}
+.faqlinks{
+    color:#ac2925;
+    font-size: large;
+
+}
+.formLog {
+    display: grid;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    align: center;
+}
 
 
