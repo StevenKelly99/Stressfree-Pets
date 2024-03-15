@@ -15,7 +15,7 @@
         <label for="county">County</label><br>
         <input type="text" id="county" name="county"/> <br />
         <label for="phoneNumber">Phone number</label><br>
-        <input type="number" id="phoneNumber" name="phoneNumber"  required/><br />
+        <input type="tel"   id="phoneNumber" name="phoneNumber"  required/><br />
         <label for="service">Service provided</label><br>
         <select id="services" required ><br>
 

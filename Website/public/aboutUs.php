@@ -5,4 +5,4 @@
         and for people to find these services. Since the pandemic demand for these services grew as did the group
         and we decided that a formal website was needed.</p>
 </div>
-<?php require '../layout/footer.php'; ?>
+<?php require_once '../layout/footer.php'; ?>

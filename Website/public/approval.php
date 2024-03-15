@@ -4,4 +4,4 @@
     <button type = "button">Deny</button>
 </div>
 
-<?php require '../layout/footer.php'; ?>
+<?php require_once '../layout/footer.php'; ?>

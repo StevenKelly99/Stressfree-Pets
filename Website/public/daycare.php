@@ -1,6 +1,6 @@
-<?php require "../layout/header.php";?>
+<?php require_once "../layout/header.php";?>
+<h1 class="headingFaq">Dog daycare</h1>
 
-<body>
 <div class="daycare">
     <div class="centre">
         <img src="../images/daycare.jpg" height="300" width="550" alt="petWalkingImg"></div>
@@ -12,4 +12,5 @@
         <a href="booking.php"><button type="button">Book here</button></a></p>
 </div>
 
-</body>
+
+<?php require_once "../layout/footer.php"; ?>

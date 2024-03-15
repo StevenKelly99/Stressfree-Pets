@@ -40,13 +40,13 @@
                         <ul class="dropdown-menu">
                             <li><a href="../public/PetWalking.php">Dog walking</a></li>
                             <li><a href="../public/petsitting.php">Pet sitting</a></li>
-                            <li><a href="#">Dog Daycare</a></li>
+                            <li><a href="../public/daycare.php">Dog Daycare</a></li>
 
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About us<b class="caret"></b></a>
+                        <a href="../public/aboutUs.php" class="dropdown-toggle" data-toggle="dropdown">About us<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="../public/aboutUs.php">About us</a></li>
                             <li><a href="../public/faq.php">FAQ</a></li>

@@ -25,8 +25,10 @@
     <label for="age">Dog Age</label>
     <input type="number" name="age" id="age">
 
-    <label for="add-info">Additional Information about your dog</label>
+    <label for="add-info">Additional Information about your dog</label><br>
     <input type="text" name="add-info" id="add-info" required>
+    <label for"certFiles">Upload image of dog</label>
+    <input type="file" id="dogImageFiles" name="dogImageFiles"><br>
 
     <input type="submit" name="submit" value="Submit">
 </form>
