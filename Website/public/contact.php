@@ -1,6 +1,4 @@
-<?php
-require_once '../lib/functions.php';
-?>
+
 <?php require_once '../layout/header.php'; ?>
 
 <div class="text-center">

@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Stressfree Pets</a>
+                <a class="navbar-brand" href="../public/index.php">Stressfree Pets</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -39,12 +39,21 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="../public/PetWalking.php">Dog walking</a></li>
-                            <li><a href="#">Pet sitting</a></li>
+                            <li><a href="../public/petsitting.php">Pet sitting</a></li>
                             <li><a href="#">Dog Daycare</a></li>
 
                         </ul>
                     </li>
-                    <li><a href="../public/aboutUs.php">About us</a> </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About us<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../public/aboutUs.php">About us</a></li>
+                            <li><a href="../public/faq.php">FAQ</a></li>
+
+
+                        </ul>
+                    </li>
                     <li><a href="../public/contact.php">Contact</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                 </ul>

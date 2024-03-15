@@ -3,7 +3,7 @@
 
 
 <body>
-<?php
+<!--<?php
 require '../lib/functions.php';
 
 $pets = get_pets();
@@ -12,7 +12,7 @@ $pets = array_reverse($pets);
 
 $cleverWelcomeMessage = 'Welcome to Stressfree Pets';
 $pupCount = count($pets);
-?>
+?> -->
 
 <div class="jumbotron">
     <div class="container">
@@ -46,7 +46,7 @@ $pupCount = count($pets);
 </body>
 
 
-
+<!--
 <div class="container">
         <div class="row">
             <?php foreach ($pets as $cutePet) { ?>
@@ -74,7 +74,7 @@ $pupCount = count($pets);
                     </p>
                 </div>
             <?php } ?>
-        </div>
+        </div> -->
 
 
 <?php require_once'../layout/footer.php'; ?>

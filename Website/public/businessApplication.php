@@ -1,5 +1,5 @@
 <?php require_once '../layout/header.php'; ?>
-
+<h2 class="headingFaq">Your Business Profile</h2>
 <div class="formLog">
     <form method="GET" action="thankYou.php" class="formLog">
         <label for="email">Email address:</label><br>

@@ -1,8 +1,8 @@
 <?php require_once '../layout/header.php'; ?>
-
+<h1 class="headingFaq">Pet Sitting</h1>
 <div class="container">
     <div class="span-images">
-        <div class="img-rounded"><img src="../images/petSitting.jpg" alt="dog sitting">
+        <div class="img-rounded"><img src="../images/petSitting.jpg" alt="dog sitting" height="400" width="800">
         <p>Our pet sitting service has 2 options: in home and out of home</p>
             <h2>In home</h2><p>
                 With our in home service the sitter minds your dog in your home. Special instructions can be given if need for
