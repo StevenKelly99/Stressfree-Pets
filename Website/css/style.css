@@ -35,6 +35,10 @@ body{
     font-size: large;
 
 }
+.formNotice{
+    text-align:center;
+    color:red;
+}
 .formLog {
     display: grid;
     max-width: 330px;
