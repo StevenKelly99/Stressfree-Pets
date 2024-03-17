@@ -1,8 +1,9 @@
 <?php require_once '../layout/header.php'; ?>
 
-<p>if you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
 
-<h2 class="headingFaq">Your Profile</h2>
+
+<h1 class="headingFaq">Your Customer Profile</h1>
+<p class="formNotice">If you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
 <form method="post" class="formLog">
     <label for="firstname">First Name: </label>
     <input type="text" name="firstname" id="firstname" required>
