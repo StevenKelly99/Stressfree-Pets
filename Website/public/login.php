@@ -1,6 +1,7 @@
 <?php require_once '../layout/header.php'; ?>
 
 <div class ="form-inline">
+    <h2>No account, regsiter<a href = "customerProfile.php">HERE</a></h2>
 
     <form action="" method="post" name="Login_Form" class="formLog">
         <h2 class="headingFaq">Please sign in</h2>
