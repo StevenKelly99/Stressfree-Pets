@@ -55,7 +55,7 @@
                         </ul>
                     </li>
                     <li><a href="../public/contact.php">Contact</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="../public/reviews.php">Reviews</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
