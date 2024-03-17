@@ -6,5 +6,5 @@ class Booking
 {
     protected $date;
     protected $time;
-    
+
 }
