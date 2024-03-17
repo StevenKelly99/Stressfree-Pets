@@ -1,4 +1,13 @@
+<?php session_start()?>
 <?php require "../src/Sessions.php"?>
+
+<?php
+session_start();
+if(!$_SESSION['Active']){
+    header("location:../public/login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,15 +66,13 @@
                     <li><a href="../public/contact.php">Contact</a></li>
                     <li><a href="../public/reviews.php">Reviews</a></li>
                 </ul>
-                <form class="navbar-form navbar-right">
+                <form action = "../public/logout.php" class="navbar-form navbar-right" method="post" name="Logout_Form">
+                    <button name="Submit" value="Logout" class="btn" type="submit">Logout</button>
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
+
                     </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                    <a href = "../public/customerProfile.php">Signup</a>
+
+
 
                 </form>
 

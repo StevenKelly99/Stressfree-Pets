@@ -12,7 +12,7 @@ class Payment
     /**
      * @return mixed
      */
-    public function getCardNumber()
+    public function setCardNumber()
     {
         return $this->cardNumber;
     }
@@ -20,7 +20,7 @@ class Payment
     /**
      * @return mixed
      */
-    public function getNameOnCard()
+    public function setNameOnCard()
     {
         return $this->nameOnCard;
     }
@@ -28,7 +28,7 @@ class Payment
     /**
      * @return mixed
      */
-    public function getExpiry()
+    public function setExpiry()
     {
         return $this->expiry;
     }

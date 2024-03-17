@@ -11,18 +11,6 @@ class Admin extends User
     /**
      * @return mixed
      */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
 
     /**
      * @return mixed
@@ -31,5 +19,6 @@ class Admin extends User
     {
         return $this->adminId;
     }
+
 
 }
