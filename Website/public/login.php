@@ -1,3 +1,4 @@
+<?php require_once ("../src/User.php") ?>
 <?php require_once '../layout/header.php'; ?>
 
 <div class ="form-inline">
