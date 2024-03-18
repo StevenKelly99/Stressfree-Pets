@@ -9,7 +9,7 @@ require_once '../layout/header.php'; ?>
 require"../src/Business.php";
 $userId = 1;
 $businessId=1;
-$data = new Business($userId,$businessId);
+$data = new \src\Business($userId,$businessId);
 $try = $data->get_business();
 
 ?>

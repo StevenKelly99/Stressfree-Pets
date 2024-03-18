@@ -8,7 +8,7 @@ require_once '../layout/header.php';
 <?php
 if (isset($_POST['submit'])){
     global $connection, $sql, $result;
-    require_once ("../src/config.php");
+
 
        require_once "../src/Clean.php";
        $clean = new Clean();
