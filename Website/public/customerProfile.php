@@ -8,30 +8,7 @@ require '../layout/header.php';
 ?>
 
 <?php
-if (isset($_POST['submit'])) {
-    require './src/Clean.php';
 
-    require '../src/CRUD';
-
-
-    $customerId = 1;
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $Address = $_POST['Address'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $dogName = $_POST['dogName'];
-    $dogType = $_POST['dogType'];
-    $age = $_POST['age'];
-    $custImage = $_POST['ImageFiles'];
-    $addinfo = $_POST['addInfo'];
-    $dogImage = $_POST['dogImage'];
-    $userId = 3;
-    $customer = new CRUD();
-    $customerForm = $customer->createEntryCustomer($customerId,
-        $firstname, $lastname, $dogType, $dogImage, $phone, $custImage, $addinfo, $userId, $dogName, $age);
-
-}
 ?>
 
 <h1 class="headingFaq">Your Customer Profile</h1>
