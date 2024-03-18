@@ -6,13 +6,22 @@ include "User.php";
 class Admin extends User
 {
    protected $adminId;
-   protected $username;
 
-
-    public function __construct()
+    /**
+     * @param $adminId
+     */
+    public function __construct($adminId)
     {
-        $this->username = new User();
+        User::__construct($this->username,$this->password);
+        $this->adminId = $adminId;
     }
+
+
+
+
+
+
+
 
 
 
@@ -36,10 +45,22 @@ class Admin extends User
     {
         $this->adminId = $adminId;
     }
-    function get_user($user)
+    function get_user()
     {
-        $user = $this->username;
-        return parent::get_user($user);
+
+        require '../lib/config.php';
+        $config = require '../lib/config.php';
+        try{
+            $pdo = new \PDO($config['database_dsn'], $config['database_user'],$config['database_pass']);
+            $query = 'INSERT INTO testing values(?,?)';
+            $stmnt =  $pdo->prepare($query);
+            $stmnt ->bindParam(1,$user);
+            $stmnt->bindParam(2,$password);
+            $stmnt->execute();}
+        catch (PDOException $exception){
+            echo "Error couldnt connect";
+        }
+        return $stmnt->fetch();
     }
 
 

@@ -1,12 +1,15 @@
-
-<?php require_once '../layout/header.php';
+<?php global $dsn, $username, $password;
+require_once '../layout/header.php';
 
 ?>
 
+<?php
+
+?>
 
 <h1 class="headingFaq">Your Customer Profile</h1>
 <p class="formNotice">If you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
-<form action="../src/CRUD.php "method="post" class="formLog">
+<form action= "../src/CRUD.php"method="post" class="formLog">
     <label for="firstname">First Name: </label>
     <input type="text" name="firstname" id="firstname" required>
 

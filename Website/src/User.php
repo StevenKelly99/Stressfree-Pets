@@ -3,26 +3,43 @@
 namespace src;
 
 
-class User
+ class  User
 {
      protected $username;
      protected $password;
 
-    public function get_user($user,$password){
+    /**
+     * @param $username
+     * @param $password
+     */
+    public function __construct($username, $password)
+    {
+        $this->username = $username;
+        $this->password = $password;
+    }
 
-    require '../lib/config.php';
-    $config = require '../lib/config.php';
-    try{
-    $pdo = new \PDO($config['database_dsn'], $config['database_user'],$config['database_pass']);
-    $query = 'INSERT INTO testing values(?,?)';
-    $stmnt =  $pdo->prepare($query);
-    $stmnt ->bindParam(1,$user);
-    $stmnt->bindParam(2,$password);
-    $stmnt->execute();}
-    catch (PDOException $exception){
-            echo "Error couldnt connect";
-        }
-    return $stmnt->fetch();
+
+public function getUsername()
+{
+    return $this->username;
+}/**
+ * @param mixed $username
+ */
+public function setUsername($username)
+{
+    $this->username = $username;
+}/**
+ * @return mixed
+ */
+public function getPassword()
+{
+    return $this->password;
+}/**
+ * @param mixed $password
+ */
+public function setPassword($password)
+{
+    $this->password = $password;
 }
 
 

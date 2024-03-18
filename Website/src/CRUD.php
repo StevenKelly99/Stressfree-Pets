@@ -4,26 +4,17 @@ namespace src;
 
 class CRUD
 {
-function createEntry(){
 
-if (isset($_POST['submit'])){
+
+    public function createEntry($firstname, $lastname,$Address,$email,
+                                $phone,$dogName, $dogType, $age,$addinfo,$dogImage){
+
+
     $config = require '../lib/config.php';
     global $connection, $sql, $result;
     // require "src/common.php";
 
-    try {
-        $new_user = array(
-            $firstname = $_POST['firstname'],
-            $lastname = $_POST['lastname'],
-            $Address = $_POST['Address'],
-            $email = $_POST['email'],
-            $phone = $_POST['phone'],
-            $dogName = $_POST['dogName'],
-            $dogType = $_POST['dogType'],
-            $age = $_POST['age'],
-            $addinfo = $_POST['addinfo'],
-            $dogImage = $_POST['dogImageFiles'],
-        );
+
 
 
 
@@ -47,15 +38,12 @@ if (isset($_POST['submit'])){
         $result = $statement -> execute();
 
 
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
 
 
-}
+
+
 
 }
 
 }
 header("location:../public/index.php");
-exit;
