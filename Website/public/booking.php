@@ -1,4 +1,22 @@
-<?php require_once '../layout/header.php'; ?>
+<?php use src\Clean;
+
+require_once '../layout/header.php'; ?>
+
+<?php
+require_once '../src/Clean.php';
+
+if (isset($_POST['submit'])) {
+    $clean = new Clean();
+
+    $services = $clean -> clean_input($_POST['services']);
+    $business = $clean -> clean_input($_POST['business']);
+    $date = $clean -> clean_input($_POST['date']);
+    $time = $clean -> clean_input($_POST['time']);
+}
+
+
+
+?>
 
 <div class="container-form">
     <form action="#" class="formLog">
@@ -8,6 +26,7 @@
 
             <label for="services">Services</label><br>
             <select name="services" id="services">
+
                 <option value="daycare">daycare</option>
                 <option value="petWalking">pet walking</option>
                 <option value="petSitting">pet Setting</option>
@@ -22,6 +41,8 @@
 
             <label for="time">Time</label><br>
             <input type="time" name="time" id="time">
+
+            <input type="submit" name="submit" value="Submit">
         </div>
 
 

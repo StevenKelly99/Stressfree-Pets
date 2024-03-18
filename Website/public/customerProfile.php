@@ -1,26 +1,28 @@
 <?php global $dsn, $username, $password;
+
+use src\Clean;
+
 require_once '../layout/header.php';
 
 ?>
 
 <?php
-
-<<<<<<< HEAD
 if (isset($_POST['submit'])){
     global $connection, $sql, $result;
     require_once ("../src/config.php");
-       // require "src/common.php";
+       require_once "../src/Clean.php";
 
+       $clean = new Clean();
 
-                $firstname = $_POST['firstname'];
-                $lastname = $_POST['lastname'];
-                $Address = $_POST['Address'];
-                $email = $_POST['email'];
-                $phone = $_POST['phone'];
-                $dogName = $_POST['dogName'];
-                $dogType = $_POST['dogType'];
-                $age = $_POST['age'];
-                $addinfo = $_POST['addinfo'];
+                $firstname = $clean -> clean_input($_POST['firstname']);
+                $lastname = $clean -> clean_input($_POST['lastname']);
+                $Address =$clean -> clean_input($_POST['Address']);
+                $email = $clean -> clean_input($_POST['email']);
+                $phone = $clean -> clean_input($_POST['phone']);
+                $dogName = $clean -> clean_input($_POST['dogName']);
+                $dogType = $clean -> clean_input($_POST['dogType']);
+                $age = $clean -> clean_input($_POST['age']);
+                $addinfo = $clean -> clean_input($_POST['addinfo']);
             try{
 
             $sql = "INSERT INTO CustomerApplecation(firstname, lastname,Address,email, 
@@ -42,8 +44,7 @@ if (isset($_POST['submit'])){
         echo " the database didn't save";
     }
 }
-=======
->>>>>>> 0a2b764a7f0b64b54a1ee4f7bb066dae05449356
+
 ?>
 
 <h1 class="headingFaq">Your Customer Profile</h1>

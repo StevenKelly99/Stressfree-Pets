@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +19,21 @@
     <script src="../js/respond.min.js"></script>
     <![endif]-->
 </head>
+
+<?php
+
+use src\Clean;
+
+require_once '../src/Clean.php';
+
+if (isset($_POST['submit'])) {
+    $clean = new Clean();
+
+    $email = $clean -> clean_input($_POST['email']);
+    $Password = $clean -> clean_input($_POST['Password']);
+
+}
+?>
 
 <body>
 
@@ -59,7 +73,7 @@
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input type="Email" placeholder="Email" class="form-control">
                     </div>
                     <div class="form-group">
                         <input type="password" placeholder="Password" class="form-control">

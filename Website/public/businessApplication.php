@@ -1,23 +1,24 @@
-<?php require_once '../layout/header.php'; ?>
+<?php use src\Clean;
+
+require_once '../layout/header.php'; ?>
 
 <?php
 if (isset($_POST['submit'])){
-        require './src/Clean.php';
+        require '../src/Clean.php';
 
-        require_once './src/DBconnection.php';
-
+        $clean = new Clean();
 
         $new_user=array(
-                "email" => escape($_POST['email']),
-                "password" => escape($_POST['password']),
-                "businessName" => escape($_POST['businessName']),
-                "streetAddress" => escape($_POST['streetAddress']),
-                "city" => escape($_POST['city']),
-                "county" => escape($_POST['county']),
-                "phoneNumber" => escape($_POST['phoneNumber']),
-                "service" => escape($_POST['service']),
-                "certs" => escape($_POST['certs']),
-                "businessImage" => escape($_POST['businessImage']),
+                $email = $clean -> clean_input($_POST['email']),
+                $password = $clean -> clean_input($_POST['password']),
+                $businessName = $clean -> clean_input($_POST['businessName']),
+                $streetAddress = $clean -> clean_input($_POST['streetAddress']),
+                $city = $clean -> clean_input($_POST['city']),
+                $county = $clean -> clean_input($_POST['county']),
+                $phoneNumber = $clean -> clean_input($_POST['phoneNumber']),
+                $service  = $clean -> clean_input($_POST['service']),
+                $certs  = $clean -> clean_input($_POST['certs']),
+                $businessImage  = $clean -> clean_input($_POST['businessImage']),
         );
 }
 ?>
