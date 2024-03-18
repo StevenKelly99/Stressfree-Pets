@@ -32,7 +32,7 @@ if (isset($_POST['submit'])){
     $statement = $pdo -> prepare($sql);
     $result = $statement -> execute([$firstname, $lastname, $Address, $email, $phone, $dogName, $dogType,
         $age, $addinfo]);
-    
+
         } catch(PDOException $error) {
             echo $sql . "<br>" . $error->getMessage();
         }
