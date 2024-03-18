@@ -10,8 +10,8 @@ require_once '../layout/header.php';
 if (isset($_POST['submit'])){
     global $connection, $sql, $result;
     require_once ("../src/config.php");
-       require_once "../src/Clean.php";
 
+       require_once "../src/Clean.php";
        $clean = new Clean();
 
                 $firstname = $clean -> clean_input($_POST['firstname']);
