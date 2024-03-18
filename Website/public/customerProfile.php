@@ -32,13 +32,13 @@ require_once '../layout/header.php';
     <input type="text" name="dogType" id="dogType" required>
 
     <label for="age">Dog Age</label>
-    <input type="number" name="age" id="age">
+    <input type="number" name="age" id="age" required>
 
     <label for="addinfo">Additional Information about your dog</label><br>
     <input type="text" name="addinfo" id="addinfo" required>
 
     <label for="dogImageFiles">Upload image of dog</label>
-    <input type="file" id="dogImageFiles" name="dogImageFiles"><br>
+    <input type="file" id="dogImageFiles" name="dogImageFiles" required><br>
 
     <input type="submit" name="submit" value="Submit">
 </form>
