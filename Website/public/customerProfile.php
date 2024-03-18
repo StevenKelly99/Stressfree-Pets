@@ -3,7 +3,6 @@
 use src\Clean;
 
 require_once '../layout/header.php';
-
 ?>
 
 <?php
@@ -25,8 +24,8 @@ if (isset($_POST['submit'])){
                 $addinfo = $clean -> clean_input($_POST['addinfo']);
             try{
 
-            $sql = "INSERT INTO CustomerApplecation(firstname, lastname,Address,email, 
-                                phone,dogName, dogType, age,addinfo ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO CustomerApplecation(firstname, lastname, Address, email, 
+                                phone, dogName, dogType, age, addinfo ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $pdo = new PDO($dsn, $username, $password);
     $statement = $pdo -> prepare($sql);
