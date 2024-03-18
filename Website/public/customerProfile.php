@@ -7,8 +7,7 @@ require_once '../layout/header.php';
 ?>
 
 <?php
-if (isset($_POST['submit'])){
-    global $connection, $sql, $result;
+if (isset($_POST['submit'])){global $connection, $sql, $result;
     require_once ("../src/config.php");
 
        require_once "../src/Clean.php";
@@ -23,16 +22,9 @@ if (isset($_POST['submit'])){
                 $dogType = $clean -> clean_input($_POST['dogType']);
                 $age = $clean -> clean_input($_POST['age']);
                 $addinfo = $clean -> clean_input($_POST['addinfo']);
-            try{
+    require '../src/CRUD';
 
-            $sql = "INSERT INTO CustomerApplecation(firstname, lastname,Address,email, 
-                                phone,dogName, dogType, age,addinfo ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-    $pdo = new PDO($dsn, $username, $password);
-    $statement = $pdo -> prepare($sql);
-    $result = $statement -> execute([$firstname, $lastname, $Address, $email, $phone, $dogName, $dogType,
-        $age, $addinfo]);
-
+<<<<<<< HEAD
         } catch(PDOException $error) {
             echo $sql . "<br>" . $error->getMessage();
         }
@@ -42,6 +34,25 @@ if (isset($_POST['submit'])){
     }else{
         echo " the database didn't save";
     }
+=======
+
+    $customerId = 1;
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $Address = $_POST['Address'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $dogName = $_POST['dogName'];
+    $dogType = $_POST['dogType'];
+    $age = $_POST['age'];
+    $custImage = $_POST['ImageFiles'];
+    $addinfo = $_POST['addInfo'];
+    $dogImage = $_POST['dogImage'];
+    $userId = 3;
+    $customer = new CRUD();
+    $customerForm = $customer->createEntryCustomer($customerId,
+        $firstname, $lastname, $dogType, $dogImage, $phone, $custImage, $addinfo, $userId, $dogName, $age);
+>>>>>>> 80595314a7744b4a6cf771a7e6206d8b6d94c6a2
 }
 ?>
 

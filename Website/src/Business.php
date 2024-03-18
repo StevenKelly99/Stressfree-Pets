@@ -2,7 +2,8 @@
 
 namespace src;
 
-use src\User;
+include "User.php";
+
 
 class Business extends User
 
@@ -16,10 +17,17 @@ class Business extends User
     protected $certQualification;
     protected $certProof;
     protected $images;
-    public function getUsername()
+    protected $businessID;
+
+    /**
+     * @param $businessID
+     */
+    public function __construct($businessID)
     {
-        return $this->username;
+        User::__construct($this->userID);
+        $this->businessID = $businessID;
     }
+
 
     /**
      * @return mixed
@@ -105,5 +113,25 @@ class Business extends User
     /**
      * @return mixed
      */
+    function get_business()
+    {
+
+        require '../lib/config.php';
+        $config = require '../lib/config.php';
+        try{
+            $pdo = new \PDO($config['database_dsn'], $config['database_user'],$config['database_pass']);
+            $query = 'Select * from streesfreepets.businessess';
+            $stmnt =  $pdo->prepare($query);
+
+
+            $stmnt->execute();}
+        catch (PDOException $exception){
+            echo "Error couldnt connect";
+        }
+        $business = $stmnt->fetchAll();
+        return $business;
+
+    }
+
 
 }

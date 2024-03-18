@@ -752,6 +752,14 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
+}
+.containerInfo {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #ac2925;
 }
 
 .container:before,
@@ -1260,6 +1268,7 @@ pre code {
   }
   .col-lg-4 {
     width: 33.33333333333333%;
+
   }
   .col-lg-5 {
     width: 41.66666666666667%;

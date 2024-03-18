@@ -1,26 +1,7 @@
-<?php use src\Clean;
-
-require_once '../layout/header.php'; ?>
+<?php require_once '../layout/header.php'; ?>
 
 <?php
-if (isset($_POST['submit'])){
-        require '../src/Clean.php';
 
-        $clean = new Clean();
-
-        $new_user=array(
-                $email = $clean -> clean_input($_POST['email']),
-                $password = $clean -> clean_input($_POST['password']),
-                $businessName = $clean -> clean_input($_POST['businessName']),
-                $streetAddress = $clean -> clean_input($_POST['streetAddress']),
-                $city = $clean -> clean_input($_POST['city']),
-                $county = $clean -> clean_input($_POST['county']),
-                $phoneNumber = $clean -> clean_input($_POST['phoneNumber']),
-                $service  = $clean -> clean_input($_POST['service']),
-                $certs  = $clean -> clean_input($_POST['certs']),
-                $businessImage  = $clean -> clean_input($_POST['businessImage']),
-        );
-}
 ?>
 
 <h2 class="headingFaq">Your Business Profile</h2>
