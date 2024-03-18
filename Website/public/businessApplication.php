@@ -1,25 +1,7 @@
 <?php require_once '../layout/header.php'; ?>
 
 <?php
-if (isset($_POST['submit'])){
-        require './src/Clean.php';
 
-        require_once './src/DBconnection.php';
-
-
-        $new_user=array(
-                "email" => escape($_POST['email']),
-                "password" => escape($_POST['password']),
-                "businessName" => escape($_POST['businessName']),
-                "streetAddress" => escape($_POST['streetAddress']),
-                "city" => escape($_POST['city']),
-                "county" => escape($_POST['county']),
-                "phoneNumber" => escape($_POST['phoneNumber']),
-                "service" => escape($_POST['service']),
-                "certs" => escape($_POST['certs']),
-                "businessImage" => escape($_POST['businessImage']),
-        );
-}
 ?>
 
 <h2 class="headingFaq">Your Business Profile</h2>
