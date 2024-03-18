@@ -3,25 +3,44 @@
 namespace src;
 
 
-class User
+ class  User
 {
      protected $username;
      protected $password;
-    function get_user($user){
 
-    require '../lib/config.php';
-    $config = require '../lib/config.php';
-    $pdo = new \PDO($config['database_dsn'], $config['database_user'],$config['database_pass']);
-    $query = 'SELECT email,password from User WHERE email = :idVal';
-    $stmnt =  $pdo->prepare($query);
-    $stmnt ->bindParam('idVal',$user);
-    $stmnt->execute();
+    /**
+     * @param $username
+     * @param $password
+     */
+    public function __construct($username, $password)
+    {
+        $this->username = $username;
+        $this->password = $password;
+    }
 
-    return $stmnt->fetch();
+
+public function getUsername()
+{
+    return $this->username;
+}/**
+ * @param mixed $username
+ */
+public function setUsername($username)
+{
+    $this->username = $username;
+}/**
+ * @return mixed
+ */
+public function getPassword()
+{
+    return $this->password;
+}/**
+ * @param mixed $password
+ */
+public function setPassword($password)
+{
+    $this->password = $password;
 }
-
-
-
 
 
 }
