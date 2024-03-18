@@ -7,21 +7,23 @@ class User
 {
      protected $username;
      protected $password;
-    function get_user($user){
+
+    public function get_user($user,$password){
 
     require '../lib/config.php';
     $config = require '../lib/config.php';
+    try{
     $pdo = new \PDO($config['database_dsn'], $config['database_user'],$config['database_pass']);
-    $query = 'SELECT email,password from User WHERE email = :idVal';
+    $query = 'INSERT INTO testing values(?,?)';
     $stmnt =  $pdo->prepare($query);
-    $stmnt ->bindParam('idVal',$user);
-    $stmnt->execute();
-
+    $stmnt ->bindParam(1,$user);
+    $stmnt->bindParam(2,$password);
+    $stmnt->execute();}
+    catch (PDOException $exception){
+            echo "Error couldnt connect";
+        }
     return $stmnt->fetch();
 }
-
-
-
 
 
 }

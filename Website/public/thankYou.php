@@ -1,4 +1,8 @@
 <?php require_once '../layout/header.php'; ?>
+<?php require "../src/User.php";
+
+?>
+
 
 
 <?php

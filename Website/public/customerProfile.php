@@ -1,52 +1,12 @@
-<?php global $dsn, $username, $password;
-require_once '../layout/header.php';
+
+<?php require_once '../layout/header.php';
 
 ?>
 
-<?php
-
-if (isset($_POST['submit'])){
-    global $connection, $sql, $result;
-    require_once ("../src/config.php");
-       // require "src/common.php";
-
-        try {
-            $new_user = array(
-                $firstname = $_POST['firstname'],
-                $lastname = $_POST['lastname'],
-                $Address = $_POST['Address'],
-                $email = $_POST['email'],
-                $phone = $_POST['phone'],
-                $dogName = $_POST['dogName'],
-                $dogType = $_POST['dogType'],
-                $age = $_POST['age'],
-                $addinfo = $_POST['addinfo'],
-            );
-
-            $sql = "INSERT INTO CustomerApplecation(firstname, lastname,Address,email, 
-                                phone,dogName, dogType, age,addinfo ) VALUES (?,?,?,?,?,?,?,?,?,?)";
-
-    $pdo = new PDO($dsn, $username, $password);
-    $statement = $pdo -> prepare($sql);
-    $result = $statement -> execute([$firstname, $lastname, $Address, $email, $phone, $dogName, $dogType,
-        $age, $addinfo]);
-
-
-        } catch(PDOException $error) {
-            echo $sql . "<br>" . $error->getMessage();
-        }
-
-    if ($result){
-        echo"saved";
-    }else{
-        echo "didn't save";
-    }
-}
-?>
 
 <h1 class="headingFaq">Your Customer Profile</h1>
 <p class="formNotice">If you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
-<form method="post" class="formLog">
+<form action="../src/CRUD.php "method="post" class="formLog">
     <label for="firstname">First Name: </label>
     <input type="text" name="firstname" id="firstname" required>
 
