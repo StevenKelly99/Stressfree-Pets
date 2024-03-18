@@ -26,7 +26,7 @@ if (isset($_POST['submit'])){
             try{
 
             $sql = "INSERT INTO CustomerApplecation(firstname, lastname,Address,email, 
-                                phone,dogName, dogType, age,addinfo ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                                phone,dogName, dogType, age,addinfo ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $pdo = new PDO($dsn, $username, $password);
     $statement = $pdo -> prepare($sql);
@@ -44,12 +44,11 @@ if (isset($_POST['submit'])){
         echo " the database didn't save";
     }
 }
-
 ?>
 
 <h1 class="headingFaq">Your Customer Profile</h1>
 <p class="formNotice">If you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
-<form action= "../src/CRUD.php"method="post" class="formLog">
+<form action= "../src/CRUD.php" method="post" class="formLog">
     <label for="firstname">First Name: </label>
     <input type="text" name="firstname" id="firstname" required>
 
@@ -77,13 +76,9 @@ if (isset($_POST['submit'])){
     <label for="addinfo">Additional Information about your dog</label><br>
     <input type="text" name="addinfo" id="addinfo" required>
 
-<<<<<<< HEAD
-
-
-=======
     <label for="dogImageFiles">Upload image of dog</label>
-    <input type="file" id="dogImageFiles" name="dogImageFiles" required><br>
->>>>>>> bf7e2fccd67871596907fcf42243d731ae5c504b
+    <input type="file" id="dogImageFiles" name="dogImageFiles" ><br>
+
 
     <input type="submit" name="submit" value="Submit">
 </form>
