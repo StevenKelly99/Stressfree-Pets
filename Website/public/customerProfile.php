@@ -3,12 +3,13 @@
 use src\Clean;
 
 require_once '../layout/header.php';
+
 ?>
 
 <?php
 if (isset($_POST['submit'])){
     global $connection, $sql, $result;
-
+    require_once ("../src/config.php");
 
        require_once "../src/Clean.php";
        $clean = new Clean();
@@ -22,33 +23,32 @@ if (isset($_POST['submit'])){
                 $dogType = $clean -> clean_input($_POST['dogType']);
                 $age = $clean -> clean_input($_POST['age']);
                 $addinfo = $clean -> clean_input($_POST['addinfo']);
+            try{
 
-    $customerId = 1;
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $Address = $_POST['Address'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $dogName = $_POST['dogName'];
-    $dogType = $_POST['dogType'];
-    $age = $_POST['age'];
-    $custImage = $_POST['ImageFiles'];
-    $addinfo = $_POST['addInfo'];
-    $dogImage = $_POST['dogImage'];
-    $userId = 3;
-    $customer = new CRUD();
-    $customerForm = $customer->createEntryCustomer($customerId,
-        $firstname, $lastname, $dogType, $dogImage, $phone, $custImage, $addinfo, $userId, $dogName, $age);
+            $sql = "INSERT INTO CustomerApplecation(firstname, lastname,Address,email, 
+                                phone,dogName, dogType, age,addinfo ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $pdo = new PDO($dsn, $username, $password);
+    $statement = $pdo -> prepare($sql);
+    $result = $statement -> execute([$firstname, $lastname, $Address, $email, $phone, $dogName, $dogType,
+        $age, $addinfo]);
 
 
+        } catch(PDOException $error) {
+            echo $sql . "<br>" . $error->getMessage();
+        }
 
+    if ($result){
+        echo"saved";
+    }else{
+        echo " the database didn't save";
+    }
 }
-
 ?>
 
 <h1 class="headingFaq">Your Customer Profile</h1>
 <p class="formNotice">If you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
-<form action= "../src/CRUD.php"method="post" class="formLog">
+<form action= "../src/CRUD.php" method="post" class="formLog">
     <label for="firstname">First Name: </label>
     <input type="text" name="firstname" id="firstname" required>
 
@@ -76,13 +76,9 @@ if (isset($_POST['submit'])){
     <label for="addinfo">Additional Information about your dog</label><br>
     <input type="text" name="addinfo" id="addinfo" required>
 
-<<<<<<< HEAD
-
-
-=======
     <label for="dogImageFiles">Upload image of dog</label>
-    <input type="file" id="dogImageFiles" name="dogImageFiles" required><br>
->>>>>>> bf7e2fccd67871596907fcf42243d731ae5c504b
+    <input type="file" id="dogImageFiles" name="dogImageFiles" ><br>
+
 
     <input type="submit" name="submit" value="Submit">
 </form>
