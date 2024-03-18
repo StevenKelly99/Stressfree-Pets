@@ -5,42 +5,62 @@ namespace src;
 
  class  User
 {
-     protected $username;
-     protected $password;
-
-    /**
-     * @param $username
-     * @param $password
-     */
-    public function __construct($username, $password)
+    protected $userID;
+    protected $email;
+    protected $password;
+    public function __construct($userID)
     {
-        $this->username = $username;
-        $this->password = $password;
+
+        $this->userID = $userID;
     }
 
 
-public function getUsername()
-{
-    return $this->username;
-}/**
- * @param mixed $username
- */
-public function setUsername($username)
-{
-    $this->username = $username;
-}/**
- * @return mixed
- */
-public function getPassword()
-{
-    return $this->password;
-}/**
- * @param mixed $password
- */
-public function setPassword($password)
-{
-    $this->password = $password;
-}
+
+     /**
+      * @return mixed
+      */
+     public function getEmail()
+     {
+         return $this->email;
+     }
+
+     /**
+      * @param mixed $email
+      */
+     public function setEmail($email)
+     {
+         $this->email = $email;
+     }
+
+
+
+        public function getPassword()
+        {
+            return $this->password;
+        }/**
+         * @param mixed $password
+         */
+        public function setPassword($password)
+        {
+            $this->password = $password;
+        }
+
+     /**
+      * @return mixed
+      */
+     public function getUserID()
+     {
+         return $this->userID;
+     }
+
+     /**
+      * @param mixed $userID
+      */
+     public function setUserID($userID)
+     {
+         $this->userID = $userID;
+     }
+
 
 
 }

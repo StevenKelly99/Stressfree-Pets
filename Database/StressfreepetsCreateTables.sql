@@ -1,4 +1,4 @@
-use stressfreepets;
+create database streesfreepets;
 
 CREATE TABLE IF NOT EXISTS User(
 userID INT PRIMARY KEY,
