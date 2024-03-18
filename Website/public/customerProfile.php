@@ -72,13 +72,18 @@ if (isset($_POST['submit'])){
     <input type="text" name="dogType" id="dogType" required>
 
     <label for="age">Dog Age</label>
-    <input type="number" name="age" id="age">
+    <input type="number" name="age" id="age" required>
 
     <label for="addinfo">Additional Information about your dog</label><br>
     <input type="text" name="addinfo" id="addinfo" required>
 
+<<<<<<< HEAD
 
 
+=======
+    <label for="dogImageFiles">Upload image of dog</label>
+    <input type="file" id="dogImageFiles" name="dogImageFiles" required><br>
+>>>>>>> bf7e2fccd67871596907fcf42243d731ae5c504b
 
     <input type="submit" name="submit" value="Submit">
 </form>

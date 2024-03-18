@@ -61,10 +61,10 @@ if (isset($_POST['submit'])){
         <input type="text" id="certs" name="certs" />
 
         <label for"certFiles">Upload proof of certification/qualification</label>
-        <input type="file" id="certFiles" name="certFiles"><br>
+        <input type="file" id="certFiles" name="certFiles" ><br>
 
         <label for="businessImage">Please upload images of your business</label><br>
-        <input type="file" id="businessImage" name="businessImage"><br />
+        <input type="file" id="businessImage" name="businessImage" required><br />
 
 
 
