@@ -1,0 +1,52 @@
+.grids{
+    max-width: 1200px;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 20px;
+}
+body{
+    background-color: bisque;
+}
+.centre{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.contact-info{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.64);
+}
+.headingFaq{
+    text-align: center;
+}
+.faqdiv{
+    background-color: #dbc59e;
+
+}
+.faqlinks{
+    color:#ac2925;
+    font-size: large;
+
+}
+.formNotice{
+    text-align:center;
+    color:red;
+}
+.formLog {
+    display: grid;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    align: center;
+}
+
+
+
+
