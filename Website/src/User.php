@@ -1,8 +1,6 @@
 <?php
 
 namespace src;
-
-
  class  User
 {
     protected $userID;
@@ -13,8 +11,6 @@ namespace src;
 
         $this->userID = $userID;
     }
-
-
 
      /**
       * @return mixed
@@ -31,8 +27,6 @@ namespace src;
      {
          $this->email = $email;
      }
-
-
 
         public function getPassword()
         {
@@ -60,7 +54,4 @@ namespace src;
      {
          $this->userID = $userID;
      }
-
-
-
 }
