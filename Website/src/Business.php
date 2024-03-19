@@ -28,6 +28,86 @@ class Business extends User
         $this->businessID = $businessID;
     }
 
+    /**
+     * @param mixed $businessName
+     */
+    public function setBusinessName($businessName): void
+    {
+        $this->businessName = $businessName;
+    }
+
+    /**
+     * @param mixed $streetAddress
+     */
+    public function setStreetAddress($streetAddress): void
+    {
+        $this->streetAddress = $streetAddress;
+    }
+
+    /**
+     * @param mixed $city
+     */
+    public function setCity($city): void
+    {
+        $this->city = $city;
+    }
+
+    /**
+     * @param mixed $county
+     */
+    public function setCounty($county): void
+    {
+        $this->county = $county;
+    }
+
+    /**
+     * @param mixed $phoneNumber
+     */
+    public function setPhoneNumber($phoneNumber): void
+    {
+        $this->phoneNumber = $phoneNumber;
+    }
+
+    /**
+     * @param mixed $serviceProvided
+     */
+    public function setServiceProvided($serviceProvided): void
+    {
+        $this->serviceProvided = $serviceProvided;
+    }
+
+    /**
+     * @param mixed $certQualification
+     */
+    public function setCertQualification($certQualification): void
+    {
+        $this->certQualification = $certQualification;
+    }
+
+    /**
+     * @param mixed $certProof
+     */
+    public function setCertProof($certProof): void
+    {
+        $this->certProof = $certProof;
+    }
+
+    /**
+     * @param mixed $images
+     */
+    public function setImages($images): void
+    {
+        $this->images = $images;
+    }
+
+    /**
+     * @param mixed $businessID
+     */
+    public function setBusinessID($businessID): void
+    {
+        $this->businessID = $businessID;
+    }
+
 
     /**
      * @return mixed

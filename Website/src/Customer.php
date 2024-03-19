@@ -15,6 +15,12 @@ class Customer extends User
      protected $dogAge;
      protected $additionalInfo;
      protected $dogPicture;
+     protected $phoneNumber;
+
+    /**
+     * @return mixed
+     */
+
 
     /**
      * @return mixed
@@ -104,7 +110,18 @@ class Customer extends User
     {
         return $this->dogPicture;
     }
+    public function getPhoneNumber()
+    {
+        return $this->phoneNumber;
+    }
 
+    /**
+     * @param mixed $phoneNumber
+     */
+    public function setPhoneNumber($phoneNumber): void
+    {
+        $this->phoneNumber = $phoneNumber;
+    }
 
 
 
