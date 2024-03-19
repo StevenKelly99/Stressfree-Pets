@@ -10,6 +10,7 @@ require_once '../layout/header.php';
 if (isset($_POST['submit'])){global $connection, $sql, $result;
     require_once ("../src/config.php");
 
+    try{
        require_once "../src/Clean.php";
        $clean = new Clean();
 
@@ -22,8 +23,18 @@ if (isset($_POST['submit'])){global $connection, $sql, $result;
                 $dogType = $clean -> clean_input($_POST['dogType']);
                 $age = $clean -> clean_input($_POST['age']);
                 $addinfo = $clean -> clean_input($_POST['addinfo']);
-    require '../src/CRUD';
+    require './src/CRUD';
 
+
+        } catch(PDOException $error) {
+            echo $sql . "<br>" . $error->getMessage();
+        }
+
+    if ($result){
+        echo"saved";
+    }else{
+        echo " the database didn't save";
+    }
 
     $customerId = 1;
     $firstname = $_POST['firstname'];
@@ -41,6 +52,7 @@ if (isset($_POST['submit'])){global $connection, $sql, $result;
     $customer = new CRUD();
     $customerForm = $customer->createEntryCustomer($customerId,
         $firstname, $lastname, $dogType, $dogImage, $phone, $custImage, $addinfo, $userId, $dogName, $age);
+
 }
 ?>
 
@@ -81,4 +93,6 @@ if (isset($_POST['submit'])){global $connection, $sql, $result;
     <input type="submit" name="submit" value="Submit">
 </form>
 
-<?php require_once '../layout/footer.php'; ?>
+<?php require_once '../layout/footer.php';
+
+?>
