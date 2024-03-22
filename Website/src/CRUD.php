@@ -6,21 +6,22 @@ class CRUD
 {
 
 
-    public function createEntryCustomer($customerID,$firstname, $lastname,$dogBreed,$dogImage,
-                                $phone,  $image,$addinfo,$userID,$dogName,$age){
+    public function createEntryCustomer(){
 
 
     $config = require '../lib/config.php';
     global $connection, $sql, $result;
 
 
-
+        $customerID,$firstname, $lastname,$dogBreed,$dogImage,
+                                $phone,  $image,$addinfo,$userID,$dogName,$age
 
 
         $pdo = new PDO($config['database_dsn'],$config['database_user'],$config['database_pass']);
 
-        $sql = "INSERT INTO customer(custID,name, surname,petBreed, 
-                                petImg, phoneNum,image,info,userID,dogName,age) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        $sql=$sql = sprintf("INSERT INTO %s (%s) values (%s)", "users",
+            implode(", ", array_keys($array)),
+            ":" . implode(", :", array_keys($array)));
         $statement = $pdo -> prepare($sql);
         $statement ->bindParam(1,$customerID);
         $statement ->bindParam(2,$firstname);
@@ -36,6 +37,7 @@ class CRUD
 
 
         $result = $statement -> execute();
+
 
         header("location:../public/thankYou.php");
 

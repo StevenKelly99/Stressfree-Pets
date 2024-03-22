@@ -15,7 +15,16 @@
       <path value="$PROJECT_DIR$/start/vendor/composer" />
       <path value="$PROJECT_DIR$/start/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/start/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/Website/vendor/composer" />
+      <path value="$PROJECT_DIR$/Website/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/Website/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/Assignment3/Website/vendor/composer" />
+      <path value="$PROJECT_DIR$/Assignment3/Website/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/Assignment3/Website/vendor/symfony/dom-crawler" />
     </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
