@@ -24,8 +24,6 @@ $try = $data->get_business();
 
                 </h2>
 
-
-
                 <blockquote class="pet-details">
                     <span class="panel-info"><?php echo $cutePet['certs']; ?></span>
                     <span class="panel-info"><?php echo $cutePet['service']; ?></span>
