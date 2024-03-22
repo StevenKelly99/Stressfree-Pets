@@ -3,12 +3,6 @@
 require_once '../layout/header.php'; ?>
 <?php require '../src/User.php';
 
-$username = "examplesess@example.com";
-$password = "intotot";
-$user = new User();
-
- $user->get_user($username,$password);
-
 
 
 ?>

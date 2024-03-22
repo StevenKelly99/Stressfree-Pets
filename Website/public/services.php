@@ -2,7 +2,6 @@
 
 require_once '../layout/header.php'; ?>
 
-
 <h1 class="headingFaq">Our business partners</h1>
 
 <?php
@@ -30,9 +29,7 @@ $try = $data->get_business();
                 </blockquote>
                 <p><?php echo $cutePet['address']; ?></p>
                 <p><?php echo $cutePet['city']; ?></p>
-
-
-
+                
 
             </div>
         <?php } ?>
