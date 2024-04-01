@@ -2,10 +2,15 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Website" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/start/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/start/vendor/symfony/dom-crawler" />
       <excludeFolder url="file://$MODULE_DIR$/start/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/Assignment3/Website/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/Assignment3/Website/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/Assignment3/Website/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/Website/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/Website/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/Website/vendor/symfony/http-foundation" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

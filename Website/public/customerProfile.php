@@ -35,24 +35,20 @@ if (isset($_POST['submit'])){global $connection, $sql, $result;
     }else{
         echo " the database didn't save";
     }
+    $array = array(
 
-    $customerId = 1;
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $Address = $_POST['Address'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $dogName = $_POST['dogName'];
-    $dogType = $_POST['dogType'];
-    $age = $_POST['age'];
-    $custImage = $_POST['ImageFiles'];
-    $addinfo = $_POST['addInfo'];
-    $dogImage = $_POST['dogImage'];
-    $userId = 3;
-    $customer = new CRUD();
-    $customerForm = $customer->createEntryCustomer($customerId,
-        $firstname, $lastname, $dogType, $dogImage, $phone, $custImage, $addinfo, $userId, $dogName, $age);
+            "firstname" =>$_POST['firstname'],
+            'lastname' =>$_POST['lastname'],
+            'Address' =>$_POST['Address'],
+            'email' =>$_POST['email']
 
+
+
+    );
+
+    $sql=$sql = sprintf("INSERT INTO %s values (%s)","customer",
+        implode(", ", array_keys($array)),
+        ":" . implode(", :", array_keys($array)));
 }
 ?>
 
