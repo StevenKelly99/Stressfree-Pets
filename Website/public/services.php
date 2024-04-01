@@ -29,7 +29,7 @@ $try = $data->get_business();
                 </blockquote>
                 <p><?php echo $cutePet['address']; ?></p>
                 <p><?php echo $cutePet['city']; ?></p>
-
+                
 
             </div>
         <?php } ?>
