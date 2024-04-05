@@ -1,0 +1,115 @@
+.fa-star {
+ color: gold;
+}
+.fa-star.disable{
+ color: lightgrey;
+}
+.product img {
+ width:100%;
+}
+.price {
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+.row{
+	display: flex;
+	gap: 20px;
+}
+.display_row img{
+	min-height: 180px;
+	object-fit: cover;
+}
+.col_20{
+	width: 20%;
+}
+.fa-star{
+	padding:  5px;
+}
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.display_row{
+	padding: 10px 0 40px;
+}
+.cart_product{
+	padding: 10px 0;
+}
+.cart_product img{
+	/*max-width: 120px;*/
+	/*object-fit: cover;*/
+}
+.quantity_btn button span{
+	padding: 0;
+}
+.no_product{
+	justify-content: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.upper_cart{
+	padding: 20px 0;
+}
+.font-weight-bold{
+	font-weight: 700;
+}
+.total_price{
+	padding-top: 18px;
+}
+.checkout_btn a{
+	font-size: 18px;
+	display: inline-block;
+    font-weight: 600;
+    background-color: #953b39;
+    padding: 10px 15px;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;	
+}
+.total_price{
+	align-items: center;
+}
+.label_field{
+	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	gap: 10px;
+}
+.label_field input{
+	width: 100%;
+    padding: 6px 10px;
+    outline: none;
+    border: 1px solid;
+    margin-top: 9px;
+}
+.checkout_upper{
+	padding: 10px 0px 40px;
+}
+.submit_btn input{
+	background-color: #953b39;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    border: 0;
+    padding: 8px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit_btn{
+	text-align: center;
+	padding-top: 10px;
+}
+
+.paymentSuccess{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.paymentSuccess p{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}

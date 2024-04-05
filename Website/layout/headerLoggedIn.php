@@ -39,11 +39,11 @@ if(!$_SESSION['Active']){
 
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../public/index.php">Stressfree Pets</a>
+                <a class="navbar-brand" href="../../../Documents/GitHubWeb/Stressfree-Pets/Website/public/index.php">Stressfree Pets</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="../public/index.php">Home</a></li>
+                    <li><a href="../../../Documents/GitHubWeb/Stressfree-Pets/Website/public/index.php">Home</a></li>
                     <li class="dropdown">
                         <a href="../public/services.php" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">

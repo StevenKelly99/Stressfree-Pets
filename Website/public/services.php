@@ -35,5 +35,5 @@ $try = $data->get_business();
         <?php } ?>
     </div>
 
-    <a href="index.php">Click here to return to home page</a>
+    <a href="../../../Documents/GitHubWeb/Stressfree-Pets/Website/public/index.php">Click here to return to home page</a>
 <?php require_once'../layout/footer.php'; ?>
