@@ -49,7 +49,7 @@ foreach ($cartItems as $id => $quantity):
         <?= $product['description'] ?>
     </div>
     <div class="col price text-right align-self-center">
-        € <?= $price ?>
+        $ <?= $price ?>
     </div>
     <div class="col text-center align-self-center">
         <form action="../public/index.php?action=changeCartQuantity&id=<?= $id ?>" method="post" class="quantity_btn">
@@ -63,7 +63,7 @@ foreach ($cartItems as $id => $quantity):
         </form>
     </div>
     <div class="col price text-right align-self-center">
-        € <?= $subtotal ?>
+        $ <?= $subtotal ?>
     </div>
     <div class="col text-center">
         <form action="../public/index.php?action=removeFromCart&id=<?= $id ?>" method="post" class="quantity_btn">
