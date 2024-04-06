@@ -1,5 +1,5 @@
 <div class="checkout_upper">
-	<form action="../public/index.php?action=sendPayment" method="post">
+	<form action="../public/products.php?action=sendPayment" method="post">
 		<div class="label_field">
 			<label>
 				First Name:

@@ -52,7 +52,7 @@ foreach ($cartItems as $id => $quantity):
         € <?= $price ?>
     </div>
     <div class="col text-center align-self-center">
-        <form action="../public/index.php?action=changeCartQuantity&id=<?= $id ?>" method="post" class="quantity_btn">
+        <form action="../public/products.php?action=changeCartQuantity&id=<?= $id ?>" method="post" class="quantity_btn">
             <button type="submit" name="amount" value="reduce" class="btn btn-primary btn-sm">
                 <span class="glyphicon glyphicon-minus"></span>
             </button>
@@ -66,7 +66,7 @@ foreach ($cartItems as $id => $quantity):
         € <?= $subtotal ?>
     </div>
     <div class="col text-center">
-        <form action="../public/index.php?action=removeFromCart&id=<?= $id ?>" method="post" class="quantity_btn">
+        <form action="../public/products.php?action=removeFromCart&id=<?= $id ?>" method="post" class="quantity_btn">
             <button class="btn btn-danger btn-sm">
                 <span class="glyphicon glyphicon-remove"></span>
                 Remove
@@ -88,7 +88,7 @@ foreach ($cartItems as $id => $quantity):
             Total
         </div>
         <div class="col-10 checkout_btn">
-            <a href="../public/index.php?action=displayCheckout">Proceed to Checkout</a>
+            <a href="../public/products.php?action=displayCheckout">Proceed to Checkout</a>
         </div>
     </div>
 </div>

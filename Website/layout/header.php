@@ -44,11 +44,11 @@ if (isset($_POST['submit'])) {
 
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../../../Documents/GitHubWeb/Stressfree-Pets/Website/public/index.php">Stressfree Pets</a>
+                <a class="navbar-brand" href="../public/index.php">Stressfree Pets</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="../../../Documents/GitHubWeb/Stressfree-Pets/Website/public/index.php">Home</a></li>
+                    <li><a href="../public/index.php">Home</a></li>
                     <li class="dropdown">
                         <a href="../public/services.php" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
                         </ul>
                     </li>
                     <li><a href="../public/contact.php">Contact</a></li>
-                    <li><a href="../public/reviews.php">Reviews</a></li>
+                    <li><a href="../public/products.php">Products</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">

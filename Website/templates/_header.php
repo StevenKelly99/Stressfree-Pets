@@ -13,12 +13,12 @@
     <nav>
         <ul>
             <li>
-                <a href="../public/index.php">
+                <a href="../public/products.php">
                     List of Products
                 </a>
             </li>
             <li>
-                <a href="../public/index.php?action=cart">
+                <a href="../public/products.php?action=cart">
                     Shopping Cart
                 </a>
             </li>

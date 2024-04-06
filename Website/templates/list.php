@@ -14,7 +14,7 @@ $pageTitle = 'List of products';
             <h4><?= $product['name'] ?></h4>
             <div class="price">
                 € <?= $price ?>
-                <a href="../public/index.php?action=addToCart&id=<?= $id ?>" class="btn btn-primary btn-sm">Add To Cart</a>
+                <a href="../public/products.php?action=addToCart&id=<?= $id ?>" class="btn btn-primary btn-sm">Add To Cart</a>
             </div>
             <?= $product['description'] ?>
         </div>
