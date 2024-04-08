@@ -8,6 +8,7 @@
     <style>
         @import '/css/products.css';
     </style>
+
 </head>
 <body class="container">
     <nav>
