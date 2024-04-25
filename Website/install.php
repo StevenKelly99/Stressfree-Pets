@@ -1,11 +1,11 @@
 <?php
-global $host, $username, $password, $options, $sql;
-require "database.php";
 
+global $username, $host, $password, $options, $sql;
+require "config.php";
 try {
     $connection = new PDO("mysql:host=$host", $username, $password,
         $options);
-    $sql = file_get_contents("data/init.sql");
+    $sql = file_get_contents("database/customer.sql");
     $connection->exec($sql);
     echo "Database and table users created successfully.";
 } catch(PDOException $error) {
