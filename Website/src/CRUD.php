@@ -39,6 +39,7 @@ class CRUD
         $statement->bindParam(':userID', $userID);
         $statement->bindParam(':dogName', $dogName);
         $statement->bindParam(':age', $age);
+        $statement ->bindParam('password', $password);
 
         $result = $statement->execute();
 

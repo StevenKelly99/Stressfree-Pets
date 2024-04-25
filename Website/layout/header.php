@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
     $clean = new Clean();
 
     $email = $clean -> clean_input($_POST['email']);
-    $Password = $clean -> clean_input($_POST['Password']);
+    $password = $clean -> clean_input($_POST['password']);
 
 }
 ?>
