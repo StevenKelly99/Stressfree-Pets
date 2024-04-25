@@ -1,4 +1,8 @@
-<?php require_once '../layout/header.php'; ?>
+<?php global $connection, $sql;
+
+use src\Clean;
+
+require_once '../layout/header.php'; ?>
 
 <?php
 if (isset($_POST['submit'])) {
@@ -6,8 +10,8 @@ if (isset($_POST['submit'])) {
     try {
         require_once '../src/DBconnect.php';
         $new_user = array(
-            "email" =>Clean::clean_input($_POST['email']),
-            "password" => Clean::clean_input($_POST['password']),
+            "email" => (new src\Clean)->clean_input($_POST['email']),
+            "password" => (new src\Clean)->clean_input($_POST['password']),
             "businessName" => Clean::clean_input($_POST['businessName']),
             "streetAddress" => Clean::clean_input($_POST['streetAddress']),
             "city" => Clean::clean_input($_POST['city']),
