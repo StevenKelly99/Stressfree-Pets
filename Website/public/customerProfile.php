@@ -7,7 +7,8 @@ require_once '../layout/header.php';
 ?>
 
 <?php
-if (isset($_POST['submit'])){global $connection, $sql, $result;
+if (isset($_POST['submit'])){
+    global $connection, $sql, $result;
     require_once ("../src/config.php");
 
     try{
@@ -46,7 +47,7 @@ if (isset($_POST['submit'])){global $connection, $sql, $result;
 
     );
 
-    $sql=$sql = sprintf("INSERT INTO %s values (%s)","customer",
+    $sql=$sql = sprintf("INSERT INTO %s values (%s)","CustomerApplication",
         implode(", ", array_keys($array)),
         ":" . implode(", :", array_keys($array)));
 }
