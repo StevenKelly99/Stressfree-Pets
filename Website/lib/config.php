@@ -1,7 +1,13 @@
 <?php
-$configVars = array(
-    'database_dsn' =>'mysql:dbname=streesfreepets; host=localhost',
-    'database_user' => 'root',
-    'database_pass' => 'HabibaAN@Mysql29--',
+/**
+ * Configuration for database connection
+ *
+ */
+$host = "localhost";
+$username = "root";
+$password = "2Trinlight#";
+$dbname = "stressFreePets"; // will use later
+$dsn = "mysql:host=$host;dbname=$dbname"; // will use later
+$options = array(
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 );
-return $configVars;

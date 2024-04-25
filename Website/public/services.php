@@ -1,4 +1,5 @@
 <?php use src\Admin;
+use src\Business;
 
 require_once '../layout/header.php'; ?>
 
@@ -8,8 +9,8 @@ require_once '../layout/header.php'; ?>
 require"../src/Business.php";
 $userId = 1;
 $businessId=1;
-$data = new \src\Business($userId,$businessId);
-$try = $data->get_business();
+
+$try = (new src\CRUD)->get_business()
 
 ?>
     <div class="container">
@@ -35,5 +36,5 @@ $try = $data->get_business();
         <?php } ?>
     </div>
 
-    <a href="../../../Documents/GitHubWeb/Stressfree-Pets/Website/public/index.php">Click here to return to home page</a>
+    <a href="index.php">Click here to return to home page</a>
 <?php require_once'../layout/footer.php'; ?>

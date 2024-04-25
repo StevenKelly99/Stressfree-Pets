@@ -52,6 +52,7 @@ if (isset($_POST['submit'])) {
                     <li class="dropdown">
                         <a href="../public/services.php" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li><a href="../public/services.php">Our services</a></li>
                             <li><a href="../public/PetWalking.php">Dog walking</a></li>
                             <li><a href="../public/petsitting.php">Pet sitting</a></li>
                             <li><a href="../public/daycare.php">Dog Daycare</a></li>

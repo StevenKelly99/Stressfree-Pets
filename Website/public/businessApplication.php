@@ -1,7 +1,36 @@
 <?php require_once '../layout/header.php'; ?>
 
 <?php
-
+if (isset($_POST['submit'])) {
+    require "../src/Clean.php";
+    try {
+        require_once '../src/DBconnect.php';
+        $new_user = array(
+            "email" =>Clean::clean_input($_POST['email']),
+            "password" => Clean::clean_input($_POST['password']),
+            "businessName" => Clean::clean_input($_POST['businessName']),
+            "streetAddress" => Clean::clean_input($_POST['streetAddress']),
+            "city" => Clean::clean_input($_POST['city']),
+            "county"=>Clean::clean_input($_POST['county']),
+            "phoneNumber" =>Clean::clean_input($_POST['phoneNumber']),
+            "services" =>Clean::clean_input($_POST['services']),
+            "certs" => Clean::clean_input($_POST['certs']),
+            "certFiles" =>Clean::clean_input($_POST['certFiles']),
+            "businessImage" =>Clean::clean_input($_POST['businessImage'])
+        );
+        $sql = sprintf(
+            "INSERT INTO %s  values (%s)",
+            "Businessess",
+            implode(", ", array_keys($new_user)),
+            ":" . implode(", :", array_keys($new_user))
+        );
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_user);
+        echo "Successfully added user";
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
 ?>
 
 <h2 class="headingFaq">Your Business Profile</h2>
@@ -49,7 +78,7 @@
 
 
 
-        <input type="submit" value="Sumbit application" name="submit"/>
+        <input type="submit" value="Submit application" name="submit"/>
     </form>
 </div>
 
