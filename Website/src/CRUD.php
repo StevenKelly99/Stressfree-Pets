@@ -39,10 +39,29 @@ class CRUD
         $statement->bindParam(':userID', $userID);
         $statement->bindParam(':dogName', $dogName);
         $statement->bindParam(':age', $age);
+        $statement ->bindParam('password', $password);
 
         $result = $statement->execute();
 
         header("location:../public/thankYou.php");
         exit(); // Always exit after a header redirect
+    }
+    function get_business()
+    {
+
+        require '../lib/config.php';
+
+        try{
+            require_once "DBConnect.php";
+            $sql = "SELECT * FROM Businessess";
+            $stmnt = $connection->prepare($sql);
+            $stmnt ->execute();
+        }
+        catch (PDOException $exception){
+            echo "Error couldnt connect";
+        }
+        return $stmnt->fetchAll();
+
+
     }
 }

@@ -1,4 +1,4 @@
-<?php global $dsn, $username, $password;
+<?php global $dsn, $username, $password, $options, $sql, $connection;
 
 use src\Clean;
 
@@ -7,54 +7,47 @@ require_once '../layout/header.php';
 ?>
 
 <?php
-if (isset($_POST['submit'])){global $connection, $sql, $result;
-    require_once ("../src/config.php");
+if (isset($_POST['submit'])) {
+    require_once("../config.php");
 
-    try{
-       require_once "../src/Clean.php";
-       $clean = new Clean();
+    try {
+        require_once '../src/DBConnect.php';
+        require_once "../src/Clean.php";
+        $clean = new Clean();
 
-                $firstname = $clean -> clean_input($_POST['firstname']);
-                $lastname = $clean -> clean_input($_POST['lastname']);
-                $Address =$clean -> clean_input($_POST['Address']);
-                $email = $clean -> clean_input($_POST['email']);
-                $phone = $clean -> clean_input($_POST['phone']);
-                $dogName = $clean -> clean_input($_POST['dogName']);
-                $dogType = $clean -> clean_input($_POST['dogType']);
-                $age = $clean -> clean_input($_POST['age']);
-                $addinfo = $clean -> clean_input($_POST['addinfo']);
-    require './src/CRUD';
+        $new_user = array(
+
+            "firstname" => $clean -> clean_input($_POST['firstname']),
+            "lastname" => $clean -> clean_input($_POST['lastname']),
+            "Address" => $clean -> clean_input($_POST['Address']),
+            "email" => $clean -> clean_input($_POST['email']),
+            "password" => $clean -> clean_input($_POST['password']),
+            "phone" => $clean -> clean_input($_POST['phone']),
+            "dogName" => $clean -> clean_input($_POST['dogName']),
+            "dogType" => $clean -> clean_input($_POST['dogType']),
+            "age" => $clean -> clean_input($_POST['age']),
+            "addinfo" => $clean -> clean_input($_POST['addinfo']),
+        );
+
+        $sql = sprintf("INSERT INTO %s (%s) values (%s)", "CustomerApplication",
+            implode(", ", array_keys($new_user)),
+            ":" . implode(", :", array_keys($new_user)));
+
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_user);
 
 
-        } catch(PDOException $error) {
-            echo $sql . "<br>" . $error->getMessage();
-        }
-
-    if ($result){
-        echo"saved";
-    }else{
-        echo " the database didn't save";
+    } catch (PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
     }
-    $array = array(
 
-            "firstname" =>$_POST['firstname'],
-            'lastname' =>$_POST['lastname'],
-            'Address' =>$_POST['Address'],
-            'email' =>$_POST['email']
-
-
-
-    );
-
-    $sql=$sql = sprintf("INSERT INTO %s values (%s)","customer",
-        implode(", ", array_keys($array)),
-        ":" . implode(", :", array_keys($array)));
 }
 ?>
 
 <h1 class="headingFaq">Your Customer Profile</h1>
 <p class="formNotice">If you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
-<form action= "../src/CRUD.php" method="post" class="formLog">
+<form action= "thankYou.php" method="post" class="formLog">
+
     <label for="firstname">First Name: </label>
     <input type="text" name="firstname" id="firstname" required>
 
@@ -66,6 +59,9 @@ if (isset($_POST['submit'])){global $connection, $sql, $result;
 
     <label for="email">Email Address</label>
     <input type="email" name="email" id="email" required>
+
+    <label for = "password">Password</label>
+    <input type="password" id="password" name="password" required />
 
     <label for="phone">Phone Number</label>
     <input type="number" name="phone" id="phone" required>
@@ -79,7 +75,7 @@ if (isset($_POST['submit'])){global $connection, $sql, $result;
     <label for="age">Dog Age</label>
     <input type="number" name="age" id="age" required>
 
-    <label for="addinfo">Additional Information about your dog</label><br>
+    <label for="addinfo">Additional Information about your dog</label>
     <input type="text" name="addinfo" id="addinfo" required>
 
     <label for="dogImageFiles">Upload image of dog</label>

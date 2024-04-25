@@ -193,25 +193,7 @@ class Business extends User
     /**
      * @return mixed
      */
-    function get_business()
-    {
 
-        require '../lib/config.php';
-        $config = require '../lib/config.php';
-        try{
-            $pdo = new \PDO($config['database_dsn'], $config['database_user'],$config['database_pass']);
-            $query = 'Select * from streesfreepets.businessess';
-            $stmnt =  $pdo->prepare($query);
-
-
-            $stmnt->execute();}
-        catch (PDOException $exception){
-            echo "Error couldnt connect";
-        }
-        $business = $stmnt->fetchAll();
-        return $business;
-
-    }
 
 
 }

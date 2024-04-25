@@ -6,7 +6,7 @@
 require "User.php" ;
 class Sessions
 {
-    /*function session(){
+    function session(){
         if(isset($_POST['Submit'])){
             if(($_POST['Username'] == $username) &&
                 ($_POST['Password']== $password)){
@@ -35,7 +35,7 @@ class Sessions
         $this ->killSession();
         header("location:../public/login.php");
         exit;
-    }*/
+    }
 
 }
 
