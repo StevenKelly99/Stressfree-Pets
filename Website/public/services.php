@@ -7,8 +7,7 @@ require_once '../layout/header.php'; ?>
 
 <?php
 require"../src/Business.php";
-
-
+require"../src/CRUD.php";
 $try = (new src\CRUD)->get_business()
 
 ?>
