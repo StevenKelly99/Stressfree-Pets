@@ -1,6 +1,6 @@
 <?php use src\Clean;
 
-require_once '../layout/headerLoggedIn.php'; ?>
+require_once '../layout/header.php'; ?>
 
 <?php
 require_once '../src/Clean.php';
@@ -32,8 +32,7 @@ if (isset($_POST['submit'])) {
                 <option value="petSitting">pet Setting</option>
             </select><br>
 
-
-            <label for="business">Business</label><br>
+            <label for="business">Business Name</label><br>
             <input type="text" name="business" id="business"><br>
 
             <label for="date">Date</label><br>
@@ -41,6 +40,15 @@ if (isset($_POST['submit'])) {
 
             <label for="time">Time</label><br>
             <input type="time" name="time" id="time">
+
+            <label for="customerName">Business Name</label><br>
+            <input type="text" name="customerName" id="customerName"><br>
+
+            <label for="dogName">Business Name</label><br>
+            <input type="text" name="dogName" id="dogName"><br>
+
+            <label for="contactNumber">Phone Number</label>
+            <input type="number" name="contactNumber" id="contactNumber" required>
 
             <input type="submit" name="submit" value="Submit">
         </div>
