@@ -1,45 +1,53 @@
-<?php global $connection, $sql;
+<?php global $dsn, $username, $password, $options, $sql, $connection;
 
 use src\Clean;
 
-require_once '../layout/header.php'; ?>
+require_once '../layout/header.php';
+
+?>
 
 <?php
 if (isset($_POST['submit'])) {
-    require "../src/Clean.php";
+    require_once "../config.php";
+
     try {
-        require_once '../src/DBconnect.php';
+        require_once '../src/DBConnect.php';
+        require_once "../src/Clean.php";
+        $clean = new Clean();
+
         $new_user = array(
-            "email" => (new src\Clean)->clean_input($_POST['email']),
-            "password" => (new src\Clean)->clean_input($_POST['password']),
-            "businessName" => Clean::clean_input($_POST['businessName']),
-            "streetAddress" => Clean::clean_input($_POST['streetAddress']),
-            "city" => Clean::clean_input($_POST['city']),
-            "county"=>Clean::clean_input($_POST['county']),
-            "phoneNumber" =>Clean::clean_input($_POST['phoneNumber']),
-            "services" =>Clean::clean_input($_POST['services']),
-            "certs" => Clean::clean_input($_POST['certs']),
-            "certFiles" =>Clean::clean_input($_POST['certFiles']),
-            "businessImage" =>Clean::clean_input($_POST['businessImage'])
+            "email" => $clean -> clean_input($_POST['email']),
+            "password" => $clean->clean_input($_POST['password']),
+            "businessName" => $clean->clean_input($_POST['businessName']),
+            "streetAddress" => $clean->clean_input($_POST['streetAddress']),
+            "city" => $clean->clean_input($_POST['city']),
+            "county" =>$clean->clean_input($_POST['county']),
+            "phoneNumber" =>$clean->clean_input($_POST['phoneNumber']),
+            "services" =>$clean->clean_input($_POST['services']),
+            "certs" => $clean->clean_input($_POST['certs']),
+            "certFiles" =>$clean->clean_input($_POST['certFiles']),
+            "businessImage" =>$clean->clean_input($_POST['businessImage'])
         );
-        $sql = sprintf(
-            "INSERT INTO %s  values (%s)",
-            "Businessess",
+
+        $sql = sprintf("INSERT INTO %s (%s) values (%s)", "BusinessApplication",
             implode(", ", array_keys($new_user)),
-            ":" . implode(", :", array_keys($new_user))
-        );
+            ":" . implode(", :", array_keys($new_user)));
+
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
-        echo "Successfully added user";
-    } catch(PDOException $error) {
+
+        echo "Business added successfully";
+
+    } catch (PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
+
 }
 ?>
 
 <h2 class="headingFaq">Your Business Profile</h2>
 <div class="formLog">
-    <form method="GET" action="thankYou.php" class="formLog">
+    <form method="post" action="businessApplication.php" class="formLog">
 
         <label for="email">Email address:</label>
         <input type="text" id="email" name="email" required/>
@@ -62,8 +70,8 @@ if (isset($_POST['submit'])) {
         <label for="phoneNumber">Phone number</label>
         <input type="tel"   id="phoneNumber" name="phoneNumber"  required/>
 
-        <label for="service">Service provided</label>
-        <select id="services" required >
+        <label for="services">Service provided</label>
+        <select name="services" id="services" datatype="text" required >
 
             <option value="inHomeSitting">In clients' home pet sitting</option>
             <option value="outHomeSitting">Out of clients' home pet sitting</option>
@@ -78,9 +86,7 @@ if (isset($_POST['submit'])) {
         <input type="file" id="certFiles" name="certFiles" ><br>
 
         <label for="businessImage">Please upload images of your business</label><br>
-        <input type="file" id="businessImage" name="businessImage" required><br />
-
-
+        <input type="file" id="businessImage" name="businessImage" ><br />
 
         <input type="submit" value="Submit application" name="submit"/>
     </form>

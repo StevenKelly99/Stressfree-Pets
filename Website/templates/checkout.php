@@ -27,7 +27,7 @@
 			</label>
 		</div>
 		<div class="submit_btn">
-			<input type="submit" value="Pay">
+            <a href="../templates/PaymentMesaage.php"><button type="button">Pay</button></a>
 		</div>
 	</form>
 </div>

@@ -1,6 +1,6 @@
 <?php use src\Clean;
 
-require_once '../layout/header.php'; ?>
+require_once '../layout/headerLoggedIn.php'; ?>
 
 <?php
 require_once '../src/Clean.php';

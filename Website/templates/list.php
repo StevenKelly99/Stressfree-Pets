@@ -1,4 +1,5 @@
 <?php
+global $products;
 $pageTitle = 'List of products';
 ?>
 <?php require_once '_header.php'; ?>
