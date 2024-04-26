@@ -3,9 +3,9 @@
 namespace src;
  class  User
 {
-    protected $userID;
-    protected $email;
-    protected $password;
+    protected int $userID;
+    protected String $email;
+    protected String $password;
     public function __construct($userID)
     {
 
@@ -44,6 +44,7 @@ namespace src;
       */
      public function getUserID()
      {
+
          return $this->userID;
      }
 
