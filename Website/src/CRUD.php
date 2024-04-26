@@ -49,11 +49,11 @@ class CRUD
     function get_business()
     {
 
-        require '../lib/config.php';
+        require '../config.php';
 
         try{
-            require_once "DBConnect.php";
-            $sql = "SELECT * FROM Businessess";
+            require_once "../src/DBConnect.php";
+            $sql = "SELECT * FROM BusinessApplication";
             $stmnt = $connection->prepare($sql);
             $stmnt ->execute();
         }
