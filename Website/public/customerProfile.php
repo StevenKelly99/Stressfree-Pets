@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
 
-        echo "added successfully";
+        echo "Your customer application is successfully added to the database";
 
     } catch (PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
