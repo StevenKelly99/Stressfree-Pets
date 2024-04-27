@@ -2,19 +2,19 @@
 
 require_once '../layout/header.php'; ?>
 <?php
-try{
+
     require_once "../src/DBConnect.php";
-    $sql = "SELECT businessName FROM BusinessApplication WHERE services = 'dogDaycare'";
+    $services = 'dogDaycare';
+    $sql = "SELECT businessName FROM BusinessApplication WHERE services = :services";
     $stmnt = $connection->prepare($sql);
+    $stmnt ->bindParam(':services',$services,PDO::PARAM_STR);
     $stmnt ->execute();
-    $names= $stmnt->fetchAll();
-}
-catch (PDOException $exception){
-    echo "Error couldnt connect";
-}
+    $names= $stmnt->fetchAll(PDO::FETCH_ASSOC);
+    var_dump($names);
 
+?>
 
-
+<?php
 require_once '../src/Clean.php';
 
 if (isset($_POST['submit'])) {
@@ -64,14 +64,16 @@ if (isset($_POST['submit'])) {
 
 
 
-            <label for="business">Business Name</label><br>
+            <label for="businessName">Business Name</label><br>
             <select name="businessName" id = "businessName" class="dropdownBooking">
                 <?php
-                foreach ($names as $businessNames):?>
-                <option value="<?php echo $businessNames;?>">
-                    <?php echo $businessNames;?>
+                foreach ($names as $businessNames): ;?>
+                <option value="<?php echo $names['businessName'];?>"><?php echo $names['businessName']; ?>
+                    
                 </option>
-                <?php endforeach; ?>
+                <?php
+                endforeach;
+                ?>
             </select><br>
 
             <label for="date">Date</label><br>
