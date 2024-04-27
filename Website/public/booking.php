@@ -7,6 +7,7 @@ require_once '../src/Clean.php';
 
 if (isset($_POST['submit'])) {
     require_once ('../config.php');
+
     $clean = new Clean();
 
     $services = $clean -> clean_input($_POST['services']);
@@ -42,10 +43,10 @@ if (isset($_POST['submit'])) {
             <label for="time">Time</label><br>
             <input type="time" name="time" id="time">
 
-            <label for="customerName">Business Name</label><br>
+            <label for="customerName">Enter your name</label><br>
             <input type="text" name="customerName" id="customerName"><br>
 
-            <label for="dogName">Business Name</label><br>
+            <label for="dogName">Dog Name</label><br>
             <input type="text" name="dogName" id="dogName"><br>
 
             <label for="contactNumber">Phone Number</label>
