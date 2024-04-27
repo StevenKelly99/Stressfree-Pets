@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS Booking(
     contactNumber int
 
 );
-
+Alter table Booking add column businessName varchar(50);
 ALTER TABLE Booking auto_increment = 100;
 
 

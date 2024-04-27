@@ -10,7 +10,7 @@ require_once '../layout/header.php'; ?>
     $stmnt ->bindParam(':services',$services,PDO::PARAM_STR);
     $stmnt ->execute();
     $names= $stmnt->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($names);
+
 
 ?>
 
@@ -25,16 +25,18 @@ if (isset($_POST['submit'])) {
         $customerName = $clean->clean_input($_POST['customerName']);
         $dogName = $clean->clean_input($_POST['dogName']);
         $contactNumber = $clean->clean_input($_POST['contactNumber']);
+        $nameBusiness = $clean->clean_input($_POST['businessName']);
 
 
         $new_booking = array(
-                "services" => "dogDaycare",
-                "businessName" => $_POST['businessName'],
+
+                "service" => "dogDaycare",
                 "date" => $date,
                 "time"=>$time,
                 "customerName"=>$customerName,
                 "dogName"=>$dogName,
-                "contactNumber"=>$contactNumber
+                "contactNumber"=>$contactNumber,
+                "businessName" => $nameBusiness
 
         );
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "Booking",
@@ -66,14 +68,11 @@ if (isset($_POST['submit'])) {
 
             <label for="businessName">Business Name</label><br>
             <select name="businessName" id = "businessName" class="dropdownBooking">
-                <?php
-                foreach ($names as $businessNames): ;?>
-                <option value="<?php echo $names['businessName'];?>"><?php echo $names['businessName']; ?>
-                    
+                <?php foreach($names as $name){
+                    ?><option value = "<?php echo $name['businessName'] ?>">
+                    <?php echo $name['businessName']?>
                 </option>
-                <?php
-                endforeach;
-                ?>
+               <?php } ?>
             </select><br>
 
             <label for="date">Date</label><br>
