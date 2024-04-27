@@ -1,25 +1,24 @@
 <?php global $connection;
 
 use src\Clean;
-
 require_once '../layout/header.php'; ?>
+
 <?php
 try{
     require_once "../src/DBConnect.php";
+    require_once "../src/Clean.php";
+
     $sql = "SELECT businessName FROM BusinessApplication WHERE services = 'dogDaycare'";
     $stmnt = $connection->prepare($sql);
     $stmnt ->execute();
-    $names= $stmnt->fetchAll();
+    $names= $stmnt->fetchAll(PDO::FETCH_ASSOC);
 }
 catch (PDOException $exception){
     echo "Error couldnt connect";
 }
 
-
-
-require_once '../src/Clean.php';
-
 if (isset($_POST['submit'])) {
+    require_once "../config.php";
     try {
         $clean = new Clean();
         $date = $clean->clean_input($_POST['date']);
@@ -69,7 +68,7 @@ if (isset($_POST['submit'])) {
                 <?php
                 foreach ($names as $businessNames):?>
                 <option value="<?php echo $businessNames;?>">
-                    <?php echo $businessNames;?>
+                    <?php //echo $businessNames;?>
                 </option>
                 <?php endforeach; ?>
             </select><br>

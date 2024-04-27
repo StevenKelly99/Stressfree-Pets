@@ -38,7 +38,6 @@ CREATE TABLE if not exists Admin(
 );
 CREATE TABLE IF NOT EXISTS Booking(
     bookingId INT(11) UNSIGNED auto_increment PRIMARY KEY,
-    service varchar(50),
     date date,
     time time,
     customerName varchar(200),
