@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
 
 
             <label for="business">Business Name</label><br>
-            <select name="businessName" id = "businessName">
+            <select name="businessName" id = "businessName" class="dropdownBooking">
                 <?php
                 foreach ($names as $businessNames):?>
                 <option value="<?php echo $businessNames;?>">
@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
             <input type="date" name="date" id="date" required><br>
 
             <label for="time">Time</label><br>
-            <input type="time" name="time" id="time" required>
+            <input type="time" name="time" id="time" required><br>
 
             <label for="customerName">Customer Name</label><br>
             <input type="text" name="customerName" id="customerName" required><br>
