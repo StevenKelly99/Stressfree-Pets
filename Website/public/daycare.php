@@ -9,7 +9,7 @@
         by specialised personnel</p>
 
     <p>if you think this service is perfect for you can
-        <a href="booking.php"><button type="button">Book here</button></a></p>
+        <a href="dayCareBooking.php"><button type="button">Book here</button></a></p>
 </div>
 
 

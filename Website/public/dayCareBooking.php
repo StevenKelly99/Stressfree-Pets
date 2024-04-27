@@ -1,24 +1,23 @@
-<?php global $connection;
+<?php use src\Clean;
 
-use src\Clean;
 require_once '../layout/header.php'; ?>
-
 <?php
-try{
-    require_once "../src/DBConnect.php";
-    require_once "../src/Clean.php";
 
-    $sql = "SELECT businessName FROM BusinessApplication WHERE services = 'dogDaycare'";
+    require_once "../src/DBConnect.php";
+    $services = 'dogDaycare';
+    $sql = "SELECT businessName FROM BusinessApplication WHERE services = :services";
     $stmnt = $connection->prepare($sql);
+    $stmnt ->bindParam(':services',$services,PDO::PARAM_STR);
     $stmnt ->execute();
     $names= $stmnt->fetchAll(PDO::FETCH_ASSOC);
-}
-catch (PDOException $exception){
-    echo "Error couldnt connect";
-}
+
+
+?>
+
+<?php
+require_once '../src/Clean.php';
 
 if (isset($_POST['submit'])) {
-    require_once "../config.php";
     try {
         $clean = new Clean();
         $date = $clean->clean_input($_POST['date']);
@@ -26,16 +25,18 @@ if (isset($_POST['submit'])) {
         $customerName = $clean->clean_input($_POST['customerName']);
         $dogName = $clean->clean_input($_POST['dogName']);
         $contactNumber = $clean->clean_input($_POST['contactNumber']);
+        $nameBusiness = $clean->clean_input($_POST['businessName']);
 
 
         $new_booking = array(
-                "services" => "dogDaycare",
-                "businessName" => $_POST['businessName'],
+
+                "service" => "dogDaycare",
                 "date" => $date,
                 "time"=>$time,
                 "customerName"=>$customerName,
                 "dogName"=>$dogName,
-                "contactNumber"=>$contactNumber
+                "contactNumber"=>$contactNumber,
+                "businessName" => $nameBusiness
 
         );
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "Booking",
@@ -63,14 +64,15 @@ if (isset($_POST['submit'])) {
 
         <div class="form-field">
 
-            <label for="business">Business Name</label><br>
+
+
+            <label for="businessName">Business Name</label><br>
             <select name="businessName" id = "businessName" class="dropdownBooking">
-                <?php
-                foreach ($names as $businessNames):?>
-                <option value="<?php echo $businessNames;?>">
-                    <?php //echo $businessNames;?>
+                <?php foreach($names as $name){
+                    ?><option value = "<?php echo $name['businessName'] ?>">
+                    <?php echo $name['businessName']?>
                 </option>
-                <?php endforeach; ?>
+               <?php } ?>
             </select><br>
 
             <label for="date">Date</label><br>

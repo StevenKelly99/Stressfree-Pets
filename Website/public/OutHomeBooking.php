@@ -4,7 +4,7 @@ require_once '../layout/header.php'; ?>
 <?php
 
 require_once "../src/DBConnect.php";
-$services = 'inHomeSitting';
+$services = 'outHomeSitting';
 $sql = "SELECT businessName FROM BusinessApplication WHERE services = :services";
 $stmnt = $connection->prepare($sql);
 $stmnt ->bindParam(':services',$services,PDO::PARAM_STR);
@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 
         $new_booking = array(
 
-            "service" => "inHomeSitting",
+            "service" => "outHomeSitting",
             "date" => $date,
             "time"=>$time,
             "customerName"=>$customerName,
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 
 <div class="container-form">
     <form action="#" class="formLog" method="post">
-        <h2>In Home Sitting Booking Form</h2>
+        <h2>Out of Home Sitting Booking Form</h2>
 
         <div class="form-field">
 

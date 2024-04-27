@@ -10,7 +10,7 @@
         Clean your dog's stuff and give your dog a bath.</p>
 
     <p>if you think this service is perfect for you can
-        <a href="booking.php"><button type="button">Book here</button></a></p>
+        <a href="petWalkingBooking.php"><button type="button">Book here</button></a></p>
 </div>
 
 <?php require_once"../layout/footer.php" ?>
