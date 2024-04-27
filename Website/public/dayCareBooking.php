@@ -1,4 +1,6 @@
-<?php use src\Clean;
+<?php global $connection;
+
+use src\Clean;
 
 require_once '../layout/header.php'; ?>
 <?php
@@ -61,8 +63,6 @@ if (isset($_POST['submit'])) {
         <h2>Dog Daycare Booking Form</h2>
 
         <div class="form-field">
-
-
 
             <label for="business">Business Name</label><br>
             <select name="businessName" id = "businessName">
