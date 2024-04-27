@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS Booking(
     contactNumber int
 
 );
+
 ALTER TABLE Booking auto_increment = 100;
 
 

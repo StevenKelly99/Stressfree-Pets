@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@
 </head>
 
 <?php
-session_start();
+
 use src\Clean;
 
 require_once '../src/Clean.php';
