@@ -9,7 +9,7 @@ require_once "../src/Clean.php";
 
 
 try {
-    require_once '../src/DBconnect.php';
+    require_once '../src/DBConnect.php';
 
     $sql = "SELECT * FROM BusinessApplication";
 
