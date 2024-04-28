@@ -1,7 +1,9 @@
+THIS LINK IS TO  OUR GITHUB WHERE YOU CAN SEE OUR VERSION CONTROL. We used it for other projects as well, so please look into Website folder, the website is there. Any issues please contact us ASAP:
+
 https://github.com/StevenKelly99/Stressfree-Pets
 
 
-Habiba:
+Habiba's Contribution:
 
 -	I created and designed some of the pages (dog walking, dog daycare, contact page, customerProfile form, booking, findingUsers, deleting, cancellingAppointment, forAdmin)
 -	I connected application, businesses and admin forms to the database (creating in crud)
@@ -25,17 +27,19 @@ how to create a contact and booking pages:
 I didn’t create everything in these two videos but they helped me getting an idea of what I want to do in these page
 
 
-Rochelle:
+Rochelle's Contribution:
 petSitting,businessApplication,aboutUs,faq,booking,dayCareBooking,login,OutHomeBooking,petWalkingBooking,
 services,ThankYou,ThankYouBooking,UpdateBusinessSingle,UpdatingBusiness
 
-Piotr:
+Piotr"s Contribution:
 Did shoping cart, and sorted sessions for the website. Adjusted DB for sessions. 
 Created Templates: _header, cart, checkout, emptyCart, list, listProducts, 
 PaymentMessage, admin_header, login, logout adjusted header.
 
+Resources I used: 
 
-Steven:
+
+Steven's Contribution:
 Created initial database
 Assistend in sessions and CRUD
 Fixing errors and layouts
