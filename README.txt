@@ -3,6 +3,7 @@ Habiba:
 Rochelle:
 
 Piotr:
+Did shoping cart, and sorted sessions for the website. Adjusted DB for sessions. 
 
 Steven
 

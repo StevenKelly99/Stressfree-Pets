@@ -12,6 +12,7 @@
               <option value="file://$PROJECT_DIR$/database/customer.sql" />
               <option value="file://$PROJECT_DIR$/database/customers/customers.sql" />
               <option value="file://$PROJECT_DIR$/database/customers/CustomerApplecation.sql" />
+              <option value="file://$PROJECT_DIR$/database/applications/users.sql" />
             </array>
           </option>
           <option name="outLayout" value="File per object by schema.groovy" />
