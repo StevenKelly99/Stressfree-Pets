@@ -10,7 +10,11 @@ Created Templates: _header, cart, checkout, emptyCart, list, listProducts,
 PaymentMessage, admin_header, login, logout adjusted header.
 
 
-Steven
+Steven:
+Created initial database
+Assistend in sessions and CRUD
+Fixing errors and layouts
+Assisted in creating classses in src folder
 
 
 Conclusion:
