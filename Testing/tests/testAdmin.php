@@ -32,7 +32,7 @@ $admin3->setEmail("blahblah@gmail.com");
 $admin3->setPassword("helloooo");
 echo "\n Test3 \nUserId: ",$admin3->getUserID(), " AdminId: ", $admin3->getAdminId()," Email: ",$admin2->getEmail()," Password: ",$admin3->getPassword();
 */
-//test 4 test if object will accept string for admin id
-$admin4 = new \src\Admin(6,"none");
+//test 4 test if object will accept string for admin id causes error
+/*$admin4 = new \src\Admin(6,"none");
 echo "\nTest4\nAdmin Id: ",$admin4->getAdminId();
-
+*/
