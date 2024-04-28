@@ -31,7 +31,7 @@ if (isset($_POST['Submit'])) {
             $_SESSION['email'] = $email;
             $_SESSION['admin'] = isAdmin($user);
 
-            header("Location: index.php");
+            header("Location: forAdmin.php");
             exit();
         } else {
             echo "Incorrect email or password. Please try again.";
