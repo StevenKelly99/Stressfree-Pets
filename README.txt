@@ -34,9 +34,9 @@ services,ThankYou,ThankYouBooking,UpdateBusinessSingle,UpdatingBusiness
 Piotr"s Contribution:
 Did shoping cart, and sorted sessions for the website. Adjusted DB for sessions. 
 Created Templates: _header, cart, checkout, emptyCart, list, listProducts, 
-PaymentMessage, admin_header, login, logout adjusted header.
+PaymentMessage, admin_header, login, logout adjusted header. Helped with design of DB.
 
-Resources I used: 
+Resources I used: Code I used for session I took from Sessions lab and applied to our website. Shopping cart was done using the example of the shoping cart from Moodle. and Knowledge on implementing and editing PHP came from SymfonyCast.
 
 
 Steven's Contribution:
