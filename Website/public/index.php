@@ -1,8 +1,13 @@
 <?php  require_once '../layout/header.php';
 
-session_start();
 
 ?>
+
+<div class="text-center">
+    <br>
+<h1> Welcome to Stress Free Pets</h1>
+<p>Here, you will find everything that makes you and your pet happy.</p>
+</div>
 
 <div class="grids">
     <div class="daycare">
@@ -25,6 +30,11 @@ session_start();
             If you need to know more about the service, you can <a href="petsitting.php"><strong>click here</strong></a></p>
     </div>
 </div>
+
+<div class="text-center">
+<h2 class="h2centre">If you want to book for an appointment <a href="bookingType.php">Click here</a></h2>
+</div>
+
 
 </body>
 

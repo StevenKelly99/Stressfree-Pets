@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +27,7 @@ use src\Clean;
 
 require_once '../src/Clean.php';
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['email']) && $_POST['password']) {
     $clean = new Clean();
 
     $email = $clean -> clean_input($_POST['email']);
@@ -66,18 +67,17 @@ if (isset($_POST['submit'])) {
                             <li><a href="../public/aboutUs.php">About us</a></li>
                             <li><a href="../public/faq.php">FAQ</a></li>
 
-
                         </ul>
                     </li>
                     <li><a href="../public/contact.php">Contact</a></li>
                     <li><a href="../public/products.php">Products</a></li>
                 </ul>
-                <form class="navbar-form navbar-right">
+                <form class="navbar-form navbar-right" method="post">
                     <div class="form-group">
-                        <input type="Email" placeholder="Email" class="form-control">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-success">Sign in</button>
                     <a href = "../public/customerProfile.php">Signup</a>

@@ -5,13 +5,13 @@ use src\Clean;
 require_once '../layout/header.php'; ?>
 <?php
 
-require_once "../src/DBConnect.php";
-$services = 'inHomeSitting';
-$sql = "SELECT businessName FROM BusinessApplication WHERE services = :services";
-$stmnt = $connection->prepare($sql);
-$stmnt ->bindParam(':services',$services,PDO::PARAM_STR);
-$stmnt ->execute();
-$names= $stmnt->fetchAll(PDO::FETCH_ASSOC);
+    require_once "../src/DBConnect.php";
+    $services = 'dogDaycare';
+    $sql = "SELECT businessName FROM BusinessApplication WHERE services = :services";
+    $stmnt = $connection->prepare($sql);
+    $stmnt ->bindParam(':services',$services,PDO::PARAM_STR);
+    $stmnt ->execute();
+    $names= $stmnt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -22,7 +22,6 @@ require_once '../src/Clean.php';
 if (isset($_POST['submit'])) {
     try {
         $clean = new Clean();
-
         $date = $clean->clean_input($_POST['date']);
         $time = $clean->clean_input($_POST['time']);
         $customerName = $clean->clean_input($_POST['customerName']);
@@ -33,13 +32,13 @@ if (isset($_POST['submit'])) {
 
         $new_booking = array(
 
-            "service" => "inHomeSitting",
-            "date" => $date,
-            "time"=>$time,
-            "customerName"=>$customerName,
-            "dogName"=>$dogName,
-            "contactNumber"=>$contactNumber,
-            "businessName" => $businessName
+                "service" => "dogDaycare",
+                "date" => $date,
+                "time"=>$time,
+                "customerName"=>$customerName,
+                "dogName"=>$dogName,
+                "contactNumber"=>$contactNumber,
+                "businessName" => $businessName
 
         );
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "Booking",
@@ -63,17 +62,19 @@ if (isset($_POST['submit'])) {
 
 <div class="container-form">
     <form action="#" class="formLog" method="post">
-        <h2>In Home Sitting Booking Form</h2>
+        <h2>Dog Daycare Booking Form</h2>
 
         <div class="form-field">
+
+
 
             <label for="businessName">Business Name</label><br>
             <select name="businessName" id = "businessName" class="dropdownBooking">
                 <?php foreach($names as $name){
                     ?><option value = "<?php echo $name['businessName'] ?>">
                     <?php echo $name['businessName']?>
-                    </option>
-                <?php } ?>
+                </option>
+               <?php } ?>
             </select><br>
 
             <label for="date">Date</label><br>
@@ -100,5 +101,4 @@ if (isset($_POST['submit'])) {
 </div>
 
 <?php require_once '../layout/footer.php'; ?>
-
 

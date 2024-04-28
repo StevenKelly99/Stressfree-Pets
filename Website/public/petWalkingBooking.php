@@ -6,7 +6,7 @@ require_once '../layout/header.php'; ?>
 <?php
 
 require_once "../src/DBConnect.php";
-$services = 'inHomeSitting';
+$services = 'dogWalking';
 $sql = "SELECT businessName FROM BusinessApplication WHERE services = :services";
 $stmnt = $connection->prepare($sql);
 $stmnt ->bindParam(':services',$services,PDO::PARAM_STR);
@@ -22,7 +22,6 @@ require_once '../src/Clean.php';
 if (isset($_POST['submit'])) {
     try {
         $clean = new Clean();
-
         $date = $clean->clean_input($_POST['date']);
         $time = $clean->clean_input($_POST['time']);
         $customerName = $clean->clean_input($_POST['customerName']);
@@ -33,7 +32,7 @@ if (isset($_POST['submit'])) {
 
         $new_booking = array(
 
-            "service" => "inHomeSitting",
+            "service" => "dogWalking",
             "date" => $date,
             "time"=>$time,
             "customerName"=>$customerName,
@@ -63,9 +62,11 @@ if (isset($_POST['submit'])) {
 
 <div class="container-form">
     <form action="#" class="formLog" method="post">
-        <h2>In Home Sitting Booking Form</h2>
+        <h2>Dog Walking Booking Form</h2>
 
         <div class="form-field">
+
+
 
             <label for="businessName">Business Name</label><br>
             <select name="businessName" id = "businessName" class="dropdownBooking">
@@ -100,5 +101,4 @@ if (isset($_POST['submit'])) {
 </div>
 
 <?php require_once '../layout/footer.php'; ?>
-
 
