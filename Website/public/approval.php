@@ -1,7 +1,7 @@
 <?php
 
 global $connection, $sql;
-require_once '../layout/admin_header.php';
+require_once '../layout/header.php';
 use src\Clean;
 
 ?>
