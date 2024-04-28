@@ -37,11 +37,8 @@ if (isset($_POST['submit'])) {
 
 }
 ?>
+    <h2 class="headingFaq">Your Admin Profile</h2>
 
-<div class ="container">
-    <button type="button">Approve</button>
-    <button type = "button">Deny</button>
-</div>
 
     <form action= "approval.php" method="post" class="formLog">
 

@@ -12,7 +12,8 @@
 
 <h4>Booking for Dog Walking
     <a href="petWalkingBooking.php"><button type="button">Book here</button></a></h4>
+<br>
 
-<p>If you want to go back to home page please <a href="index.php"> click here </p>
+<h4>If you want to go back to home page please <a href="index.php"> click here </h4>
 
 <?php require_once '../layout/header.php'; ?>
