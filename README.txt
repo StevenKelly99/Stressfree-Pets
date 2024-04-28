@@ -15,13 +15,13 @@ ThankYou
 ThankYouBooking
 UpdateBusinessSingle
 UpdatingBusiness
-Piotr:
-<<<<<<< HEAD
-Did shoping cart, and sorted sessions for the website. Adjusted DB for sessions. created Templates: _header.php, 
 
-=======
+Piotr:
 Did shoping cart, and sorted sessions for the website. Adjusted DB for sessions. 
->>>>>>> d33650cd6248af4ef79d2e9d4f19f15aafbfb973
+Created Templates: _header, cart, checkout, emptyCart, list, listProducts, 
+PaymentMessage, admin_header, login, logout adjusted header.
+
+
 Steven
 
 
