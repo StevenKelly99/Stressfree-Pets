@@ -4,20 +4,8 @@ https://github.com/StevenKelly99/Stressfree-Pets
 Habiba:
 
 Rochelle:
-petSitting
-businessApplication
-aboutUs
-faq
-booking
-dayCareBooking
-login
-OutHomeBooking
-petWalkingBooking
-services
-ThankYou
-ThankYouBooking
-UpdateBusinessSingle
-UpdatingBusiness
+petSitting,businessApplication,aboutUs,faq,booking,dayCareBooking,login,OutHomeBooking,petWalkingBooking,
+services,ThankYou,ThankYouBooking,UpdateBusinessSingle,UpdatingBusiness
 
 Piotr:
 Did shoping cart, and sorted sessions for the website. Adjusted DB for sessions. 
