@@ -3,6 +3,12 @@
 
 ?>
 
+<div class="text-center">
+    <br>
+<h1> Welcome to Stress Free Pets</h1>
+<p>Here, you will find everything that makes you and your pet happy.</p>
+</div>
+
 <div class="grids">
     <div class="daycare">
         <img src="../images/daycare.jpg" height="250" width="350" alt="picture">
@@ -24,6 +30,11 @@
             If you need to know more about the service, you can <a href="petsitting.php"><strong>click here</strong></a></p>
     </div>
 </div>
+
+<div class="text-center">
+<h2 class="h2centre">If you want to book for an appointment <a href="bookingType.php">Click here</a></h2>
+</div>
+
 
 </body>
 

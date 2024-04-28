@@ -1,11 +1,11 @@
 .grids{
-    max-width: 1200px;
     margin: 150px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-content: center;
     grid-gap: 20px;
+
 }
 body{
     background-color: bisque;
@@ -45,6 +45,11 @@ body{
     padding: 15px;
     margin: 0 auto;
     align: center;
+}
+
+.h2centre{
+    display: grid;
+    text-align: center;
 }
 
 

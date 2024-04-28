@@ -1,4 +1,6 @@
-<?php use src\Clean;
+<?php global $connection;
+
+use src\Clean;
 
 require_once '../layout/header.php'; ?>
 <?php
@@ -20,12 +22,13 @@ require_once '../src/Clean.php';
 if (isset($_POST['submit'])) {
     try {
         $clean = new Clean();
+
         $date = $clean->clean_input($_POST['date']);
         $time = $clean->clean_input($_POST['time']);
         $customerName = $clean->clean_input($_POST['customerName']);
         $dogName = $clean->clean_input($_POST['dogName']);
         $contactNumber = $clean->clean_input($_POST['contactNumber']);
-        $nameBusiness = $clean->clean_input($_POST['businessName']);
+        $businessName = $clean->clean_input($_POST['businessName']);
 
 
         $new_booking = array(
@@ -36,7 +39,7 @@ if (isset($_POST['submit'])) {
             "customerName"=>$customerName,
             "dogName"=>$dogName,
             "contactNumber"=>$contactNumber,
-            "businessName" => $nameBusiness
+            "businessName" => $businessName
 
         );
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "Booking",
@@ -63,8 +66,6 @@ if (isset($_POST['submit'])) {
         <h2>In Home Sitting Booking Form</h2>
 
         <div class="form-field">
-
-
 
             <label for="businessName">Business Name</label><br>
             <select name="businessName" id = "businessName" class="dropdownBooking">

@@ -1,16 +1,18 @@
 <?php require_once "../layout/header.php";?>
 <h1 class="headingFaq">Dog daycare</h1>
 
+<div class="text-center">
+
 <div class="daycare">
     <div class="centre">
         <img src="../images/daycare.jpg" height="300" width="550" alt="petWalkingImg"></div>
-    <p>Daycare is going to make your pet more socialised, play, and do exercise.
-        To prevent loneliness and anxiety, watch your dog and take care of it.
-        by specialised personnel</p>
-
-    <p>if you think this service is perfect for you can
-        <a href="dayCareBooking.php"><button type="button">Book here</button></a></p>
+    <h4>Daycare is going to make your pet more socialised, <br> play, <br> do exercise.
+        prevent loneliness and anxiety,<br> watch your dog <br> take care of it
+        by specialised personnel</h4>
 </div>
+</div>
+<h4>if you think this service is perfect for you can
+    <a href="dayCareBooking.php"><button type="button">Book here</button></a></h4>
 
 
 <?php require_once "../layout/footer.php"; ?>
