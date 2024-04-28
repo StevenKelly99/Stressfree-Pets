@@ -6,35 +6,6 @@ use src\Clean;
 
 
 
-/*
-if (isset($_GET["customerName"])) {
-
-    $clean = new Clean();
-    $result = "";
-
-    try {
-        require_once '../src/DBconnect.php';
-
-        $customerName = $_GET["customerName"];
-
-        $sql = "DELETE FROM Booking WHERE customerName = :customerName";
-
-        $statement = $connection->prepare($sql);
-        $statement->bindValue(':customerName', $customerName);
-        $statement->execute();
-
-        $result = "User ". $customerName. " successfully deleted";
-
-  } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
-
-
-
-*/
-
-
 if (isset($_POST['submit'])) {
     try {
         require "../src/Clean.php";
