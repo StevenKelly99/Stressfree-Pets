@@ -59,7 +59,7 @@ if (isset($_SESSION['email'])) {
                     <li><a href="../public/products.php">Products</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
-                    <button type="submit" class="btn btn-danger" formaction="logout.php">Sign out</button>
+                    <button type="submit" class="btn btn-danger" formaction="../public/logout.php">Sign out</button>
                 </form>
             </div>
         </div>
