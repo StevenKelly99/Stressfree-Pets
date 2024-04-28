@@ -5,11 +5,9 @@ require_once '../layout/header.php';
 use src\Clean;
 
 ?>
-
 <?php
 if (isset($_POST['submit'])) {
     require_once("../config.php");
-
     try {
         require_once '../src/DBConnect.php';
         require_once "../src/Clean.php";
