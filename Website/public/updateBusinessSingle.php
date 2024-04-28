@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
         require_once '../src/DBconnect.php';
         require_once '../src/Clean.php';
         $clean = new Clean();
-        $user =[
+        $user3 =[
             "id" => $clean->clean_input($_POST['id']),
             "email" => $clean -> clean_input($_POST['email']),
             "password" => $clean->clean_input($_POST['password']),
@@ -35,27 +35,24 @@ services = :services,
 certs = :certs
 WHERE businessName =:businessName";
         $statement = $connection->prepare($sql);
-        $statement->execute($user);
+        $statement->execute($user3);
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }?>
 <?php
-if(isset($_GET['businessName'])) {
-    try {
+
+
         require_once '../src/DBconnect.php';
-        $business = $_GET['businessName'];
+        $businessName = $_GET['businessName'];
         $sql = "SELECT * FROM businessapplication WHERE businessName =:businessName";
         $statement = $connection->prepare($sql);
-        $statement->bindValue(':businessName',$business);
+        $statement->bindValue(':businessName',$businessName);
         $statement->execute();
         $user = $statement->fetch(PDO::FETCH_ASSOC);
-    } catch (PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
-else
-    echo "Something went wrong";
+
+
+
 
 
 
@@ -64,14 +61,17 @@ else
 
 
     <h2>Edit a user</h2>
-    <form method="post">
-        <?php foreach ($user as $key => $value) : ?>
-            <label for="<?php echo $key; ?>"><?php echo ucfirst($key); ?></label>
-            <input type="text" name="<?php echo $key; ?>" id="<?php echo $key;
-            ?>" value="<?php echo Clean::clean_input($value); ?>" <?php echo ($key === 'id' ?
-                'readonly' : null); ?>>
-        <?php endforeach; ?>
-        <input type="submit" name="submit" value="Submit">
+    <form method="post" action="forAdmin.php">
+        <?php foreach ($user as $key => $value) {?>
+
+            <label for ="<?php echo $key?>"><?php echo $key?></label><br>
+            <input type = "text" value="<?php echo \src\Clean::clean_input($value);?>"><br>
+
+
+        <?php }?>
+
+
+        <input type="submit" name="submit" value="Update" >
     </form>
     <a href="index.php">Back to home</a>
 <?php require "../layout/footer.php"; ?>
