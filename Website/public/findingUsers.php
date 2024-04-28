@@ -142,7 +142,7 @@ if (isset($_POST['submit'])) {
     <input type="text" id="services" name="services">
     <br>
 
-    <h2>Finding customer from age </h2>
+    <h2>Finding customer from their dog breed </h2>
     <label for="dogType">Type the dog breed</label>
     <input type="text" id="dogType" name="dogType"><br><br>
 

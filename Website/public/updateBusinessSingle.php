@@ -3,7 +3,7 @@
 require "../config.php";
 if (isset($_POST['submit'])) {
 
-    try {
+
         require_once '../src/DBConnect.php';
         require_once '../src/Clean.php';
         $clean = new Clean();
@@ -33,12 +33,10 @@ county = :county,
 phoneNumber = :phoneNumber,
 services = :services
 
-WHERE  (businessName =:businessName)";
+WHERE  businessName =:businessName";
         $statement = $connection->prepare($sql);
         $statement->execute($user3);
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
+
 }?>
 <?php
 
