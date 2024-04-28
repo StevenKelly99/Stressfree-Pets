@@ -1,3 +1,6 @@
+https://github.com/StevenKelly99/Stressfree-Pets
+
+
 Habiba:
 
 -	I created and designed some of the pages (dog walking, dog daycare, contact page, customerProfile form, booking, findingUsers, deleting, cancellingAppointment, forAdmin)
@@ -23,20 +26,8 @@ I didn’t create everything in these two videos but they helped me getting an i
 
 
 Rochelle:
-petSitting
-businessApplication
-aboutUs
-faq
-booking
-dayCareBooking
-login
-OutHomeBooking
-petWalkingBooking
-services
-ThankYou
-ThankYouBooking
-UpdateBusinessSingle
-UpdatingBusiness
+petSitting,businessApplication,aboutUs,faq,booking,dayCareBooking,login,OutHomeBooking,petWalkingBooking,
+services,ThankYou,ThankYouBooking,UpdateBusinessSingle,UpdatingBusiness
 
 Piotr:
 Did shoping cart, and sorted sessions for the website. Adjusted DB for sessions. 
@@ -49,6 +40,7 @@ Created initial database
 Assistend in sessions and CRUD
 Fixing errors and layouts
 Assisted in creating classses in src folder
+
 
 
 Conclusion:
