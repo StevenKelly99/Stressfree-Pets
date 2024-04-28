@@ -1,6 +1,3 @@
-
-
-
 <?php require_once '../layout/header.php'; ?>
 <div class="text-center">
     <h2>CONTACT</h2></div>
