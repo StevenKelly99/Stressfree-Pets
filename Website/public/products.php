@@ -1,18 +1,10 @@
-<?php  require_once '../layout/headerLoggedIn.php';
-
-
-
+<?php require_once '../layout/header.php';
 ?>
 
 <?php
 require_once __DIR__ . '/../src/functions.php';
 require_once __DIR__ . '/../templates/listProducts.php';
 require_once __DIR__ . '/../templates/list.php';
-
-
-
-
-require_once __DIR__ . '/../src/functions.php';
 
 // try to find "action" in query-string variables
 $action = filter_input(INPUT_GET, 'action');

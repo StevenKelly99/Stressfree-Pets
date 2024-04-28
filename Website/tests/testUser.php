@@ -1,7 +1,7 @@
 <?php
 require '../src/User.php';
-$user1 = new \src\User(1);
-$user2 = new src\User(2);
+$user1 = new \src\User(5);
+$user2 = new \src\User(4);
 
 //test get and set for user 1
 $user1->setUserID(2);

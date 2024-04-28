@@ -42,12 +42,31 @@ CREATE TABLE IF NOT EXISTS Booking(
     time time,
     customerName varchar(200),
     dogName varchar(50),
-    contactNumber int
+    contactNumber int,
+    busniessName varchar(50)
 
 );
+<<<<<<< Updated upstream
 #Alter table Booking add column businessName varchar(50);
+=======
+
+>>>>>>> Stashed changes
 ALTER TABLE Booking auto_increment = 100;
 
+CREATE TABLE IF NOT EXISTS Invoice(
+    invoiceId INT(11) UNSIGNED auto_increment PRIMARY KEY,
+    bookingId int,
+    date date,
+    time time,
+    customerName varchar(200),
+    dogName varchar(50),
+    contactNumber int,
+    businessName varchar(50),
+    cost int
+
+
+);
+alter table Invoice auto_increment = 500;
 
 
 

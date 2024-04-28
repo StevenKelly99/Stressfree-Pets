@@ -22,10 +22,18 @@ class Business extends User
     /**
      * @param $businessID
      */
-    public function __construct($businessID)
+    public function __construct($userID,$businessID)
     {
-        User::__construct($this->userID);
+        User::__construct($userID);
         $this->businessID = $businessID;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBusinessID()
+    {
+        return $this->businessID;
     }
 
     /**
