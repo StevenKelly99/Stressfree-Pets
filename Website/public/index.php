@@ -35,7 +35,7 @@
 </div>
 
 <div class="text-center">
-<h2 class="h2centre">If you want to book for an appointment <a href="bookingType.php">Click here</a></h2>
+<h2>If you want to book for an appointment <a href="bookingType.php">Click here</a></h2>
 </div>
 
 

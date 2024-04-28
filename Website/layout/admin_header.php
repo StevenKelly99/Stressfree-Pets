@@ -8,13 +8,13 @@ function isLoggedIn() {
 
 // Function to check if the logged-in user is an admin
 function isAdmin() {
-    // Check if the admin flag is set in the session
-    return ($_SESSION['admin'] === true);
+    // Check if the 'admin' session variable is set and is true
+    return isset($_SESSION['admin']) && $_SESSION['admin'] == 1;
 }
 
 // Check if the user is logged in and is an admin, if not, redirect them
 if (!isLoggedIn() || !isAdmin()) {
-    header("Location: ../public/index.php"); // Redirect to home page or another appropriate page
+    header("Location: ../public/index.php");
     exit();
 }
 ?>
@@ -70,14 +70,9 @@ if (!isLoggedIn() || !isAdmin()) {
                 <li><a href="../public/contact.php">Contact</a></li>
                 <li><a href="../public/products.php">Products</a></li>
                 <?php if (isLoggedIn()) : ?>
-                    <?php if (isAdmin()) : ?>
-                        <!-- Admin-specific menu items -->
-                        <li><a href="../admin/dashboard.php">Admin Dashboard</a></li>
-                        <li><a href="../admin/users.php">Manage Users</a></li>
-                    <?php endif; ?>
                     <!-- Common menu items for logged-in users -->
                     <li>
-                        <form class="navbar-form navbar-right" action="logout.php" method="post">
+                        <form class="navbar-form navbar-right" action="../public/logout.php" method="post">
                             <button type="submit" class="btn btn-danger">Sign out</button>
                         </form>
                     </li>

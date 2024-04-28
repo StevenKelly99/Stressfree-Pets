@@ -326,7 +326,7 @@ textarea {
 }
 
 a {
-  color: #eb9316;
+  color:#a47e3c;
   text-decoration: none;
 }
 
@@ -2017,6 +2017,7 @@ textarea.input-lg {
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
+  color: #953b39;
 }
 
 .btn:focus {
@@ -2215,8 +2216,8 @@ fieldset[disabled] .btn-danger.active {
 }
 
 .btn-success {
-  color: #953b39;
-  background-color: #eb9316;
+
+  background-color: #953b39;
   border-color: #953b39;
 }
 

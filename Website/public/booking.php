@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 <div class="container-form">
-    <form action="#" class="formLog" method="post">
+    <form action="thankYouBooking.php" class="formLog" method="post">
         <h2>In Home Sitting Booking Form</h2>
 
         <div class="form-field">
