@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
         $statement = $connection->prepare($sql);
         $statement->execute($new_booking);
 
-        echo "added successfully";
+        echo "You appointment is booked successfully";
     }
     catch (PDOException $error){
         echo $sql . "<br>". $error->getMessage();

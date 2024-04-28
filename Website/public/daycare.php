@@ -4,10 +4,10 @@
 <div class="text-center">
 
 <div class="daycare">
-    <div class="centre">
+    <div class="text-center">
         <img src="../images/daycare.jpg" height="300" width="550" alt="petWalkingImg"></div>
-    <h4>Daycare is going to make your pet more socialised, <br> play, <br> do exercise.
-        prevent loneliness and anxiety,<br> watch your dog <br> take care of it
+    <h4>Daycare is going to make your pet more socialised, play, do exercise.
+        prevent loneliness and anxiety, watch your dog take care of it
         by specialised personnel</h4>
 </div>
 </div>
