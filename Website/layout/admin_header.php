@@ -50,25 +50,8 @@ if (!isLoggedIn() || !isAdmin()) {
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="../public/index.php">Home</a></li>
-                <li class="dropdown">
-                    <a href="../public/services.php" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../public/services.php">Our services</a></li>
-                        <li><a href="../public/PetWalking.php">Dog walking</a></li>
-                        <li><a href="../public/petsitting.php">Pet sitting</a></li>
-                        <li><a href="../public/daycare.php">Dog Daycare</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="../public/aboutUs.php" class="dropdown-toggle" data-toggle="dropdown">About us<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../public/aboutUs.php">About us</a></li>
-                        <li><a href="../public/faq.php">FAQ</a></li>
-                    </ul>
-                </li>
-                <li><a href="../public/contact.php">Contact</a></li>
-                <li><a href="../public/products.php">Products</a></li>
+
+                <li><a href="../public/forAdmin.php">For Admin</a></li>
                 <?php if (isLoggedIn()) : ?>
                     <!-- Common menu items for logged-in users -->
                     <li>
@@ -77,19 +60,7 @@ if (!isLoggedIn() || !isAdmin()) {
                         </form>
                     </li>
                 <?php else : ?>
-                    <!-- Sign-in form for non-logged-in users -->
-                    <li>
-                        <form class="navbar-form navbar-right" action="login.php" method="post">
-                            <div class="form-group">
-                                <input type="Email" placeholder="Email" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="Password" class="form-control">
-                            </div>
-                            <button type="submit" class="btn btn-success">Sign in</button>
-                            <a href="../public/customerProfile.php" class="btn btn-primary">Sign up</a>
-                        </form>
-                    </li>
+
                 <?php endif; ?>
             </ul>
         </div>
