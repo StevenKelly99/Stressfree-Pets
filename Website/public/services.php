@@ -54,7 +54,8 @@ catch (PDOException $exception){
                 <p><?php echo $cutePet['city']; ?></p>
                 <p><?php echo $cutePet['county']; ?></p>
                 <p><?php echo $cutePet['phoneNumber']; ?></p>
-                <p><?php echo $cutePet['email']; ?></p>
+
+                <a href="mailto:<?php $cutePet['email'] ?>"><?php echo $cutePet['email']; ?></a>
                 
 
             </div>

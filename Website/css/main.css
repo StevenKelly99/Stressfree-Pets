@@ -8,6 +8,19 @@ body {
 .pet-list-item blockquote {
     color: #999;
     padding: 0 10px;
+    border: 1px solid #953b39 ;
+}
+.card{
+
+    padding: 20px;
+    border: 1px solid #953b39;
+    border-radius: 4px;
+    width: auto;
+
+}
+.formInvoice{
+    text-align: right;
+    align-content: center;
 }
 
 .pet-list-item img {
