@@ -1,4 +1,4 @@
-global$pageTitle; global$pageTitle; global$pageTitle; <!DOCTYPE HTML>
+global$pageTitle; <!DOCTYPE HTML>
 <html>
 <head>
     <title>Shopping site: <?= $pageTitle ?></title>
