@@ -2,22 +2,24 @@
 
 namespace src;
 
+use PhpParser\Node\Scalar\String_;
+
 include "User.php";
 
 
 class Business extends User
 
 {
-    protected $businessName;
-    protected $streetAddress;
-    protected $city;
-    protected $county;
-    protected $phoneNumber;
-    protected $serviceProvided;
-    protected $certQualification;
+    protected String $businessName;
+    protected String $streetAddress;
+    protected String $city;
+    protected String $county;
+    protected int $phoneNumber;
+    protected String $serviceProvided;
+    protected String $certQualification;
     protected $certProof;
     protected $images;
-    protected $businessID;
+    protected int $businessID;
 
     /**
      * @param $businessID

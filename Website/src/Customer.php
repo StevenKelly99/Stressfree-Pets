@@ -4,6 +4,7 @@ namespace src;
 
 use src\User;
 
+
 class Customer extends User
 {
     protected $customerId;
@@ -18,6 +19,15 @@ class Customer extends User
      protected $phoneNumber;
 
     /**
+     * @param $customerId
+     */
+    public function __construct($userId,$customerId)
+    {
+        User::__construct($userId);
+        $this->customerId = $customerId;
+    }
+
+    /**
      * @return mixed
      */
 
@@ -25,6 +35,7 @@ class Customer extends User
     /**
      * @return mixed
      */
+
     public function getUsername()
     {
         return $this->username;

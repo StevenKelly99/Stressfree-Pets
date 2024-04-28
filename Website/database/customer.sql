@@ -46,11 +46,9 @@ CREATE TABLE IF NOT EXISTS Booking(
     busniessName varchar(50)
 
 );
-<<<<<<< Updated upstream
-#Alter table Booking add column businessName varchar(50);
-=======
 
->>>>>>> Stashed changes
+
+
 ALTER TABLE Booking auto_increment = 100;
 
 CREATE TABLE IF NOT EXISTS Invoice(

@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Use an HTML form to edit an entry in the
- * users table.
- *
- */
 
 if (isset($_POST['submit'])) {
     try {

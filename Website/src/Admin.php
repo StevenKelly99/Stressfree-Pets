@@ -5,7 +5,7 @@ include "User.php";
 
 class Admin extends User
 {
-   protected $adminId;
+   protected int $adminId;
 
     /**
      * @param $adminId
