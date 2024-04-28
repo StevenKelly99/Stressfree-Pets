@@ -46,6 +46,8 @@ Fixing errors and layouts
 Assisted in creating classses in src folder
 
 
+All the code was used from labs we have done and from SimfonyCast courses
+
 
 Conclusion:
 Habiba 25%, Rochelle 25% Piotr 25% Steven 25% == 100%
