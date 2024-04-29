@@ -47,7 +47,6 @@ if (isset($_POST['submit'])) {
 
 <h1 class="headingFaq">Your Customer Profile</h1>
 <p class="formNotice">If you are a business <a href="businessApplication.php"><strong>click here</strong></a></p>
-<p class="formNotice">If you are an admin <a href="approval.php"><strong>click here</strong></a></p>
 
 <form action= "customerProfile.php" method="post" class="formLog">
 
