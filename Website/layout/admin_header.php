@@ -46,7 +46,6 @@ if (!isLoggedIn() || !isAdmin()) {
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../public/index.php">Stressfree Pets</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

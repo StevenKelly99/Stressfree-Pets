@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 }
 
 
-require "../layout/header.php";
+require "../layout/admin_header.php";
 
 if (isset($_POST['submit'])) {
     if ($result && $statement->rowCount() > 0) {
