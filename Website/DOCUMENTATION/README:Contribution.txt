@@ -1,4 +1,12 @@
-THIS LINK IS TO  OUR GITHUB WHERE YOU CAN SEE OUR VERSION CONTROL. We used it for other projects as well, so please look into Website folder, the website is there. Any issues please contact us ASAP:
+Declaration:
+I hereby certify that this material, which I now submit for assessment on the program of study leading to the award of Ordinary Degree in Computing in the Institute of Technology Blanchardstown, is entirely my own work except where otherwise stated.
+Author: Rochelle Mullen Dated: 29/APRIL/2024
+Author: Steven Kelly Dated: 29/APRIL/2024
+Author: Habiba Nour Dated: 29/APRIL/2024
+Author: Piotr Momat Dated: 29/APRIL/2024
+
+
+THIS LINK IS TO  OUR GITHUB WHERE YOU CAN SEE OUR VERSION CONTROL. We used it for other projects as well, so please look into Website folder, the website is there:
 
 https://github.com/StevenKelly99/Stressfree-Pets
 
@@ -47,7 +55,7 @@ Assisted in creating classses in src folder
 
 
 All the code was used from labs we have done and from SimfonyCast courses
-
+The Template of the website is based on the SymfonyCast
 
 Conclusion:
-Habiba 25%, Rochelle 25% Piotr 25% Steven 25% == 100%
+Habiba 25%, Rochelle 25%, Piotr 25%, Steven 25% == 100%
