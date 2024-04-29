@@ -15,7 +15,6 @@
     <h4> updating businesses profile
         <a href="updatingBusiness.php"><button type="submit" class="button" value="login" name="submit">click here</button></a></h4>
 
-<p>If you want to go back to home page please <a href="index.php"> click here </p>
 </div>
 <br><br>
 

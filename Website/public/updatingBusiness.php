@@ -23,7 +23,7 @@ try {
 }
 ?>
 
-<?php require "../layout/header.php"?>
+<?php require "../layout/admin_header.php"?>
     <h2>Updating Business</h2>
 
 
