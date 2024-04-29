@@ -7,7 +7,7 @@ require_once "../src/Clean.php";
 
 if (isset($_GET["email"])) {
     try {
-        require_once '../src/DBconnect.php';
+        require_once '../src/DBConnect.php';
 
         $email = $_GET["email"];
 
@@ -25,7 +25,7 @@ if (isset($_GET["email"])) {
 }
 
 try {
-    require_once '../src/DBconnect.php';
+    require_once '../src/DBConnect.php';
 
     $sql = "SELECT * FROM BusinessApplication";
 

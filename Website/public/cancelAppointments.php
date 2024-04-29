@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
         require "../src/Clean.php";
         $clean = new Clean();
 
-        require_once '../src/DBconnect.php';
+        require_once '../src/DBConnect.php';
 
         $sql = "SELECT * FROM Booking WHERE customerName = :customerName";
         $customerName = $_POST['customerName'];
